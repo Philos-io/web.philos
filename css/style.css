@@ -12,3 +12,29 @@
 .icon-block .material-icons {
 	font-size: inherit;
 }
+
+/* ======================
+HEADER
+   ======================*/
+
+.bg-photo{
+	background-image: url(../img/working.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+/*	  background-position-x: 50%;
+  background-position-y: 30%;*/
+}
+.active{
+	border-bottom: solid 2px white;
+}
+nav ul li:hover, nav ul li.active {
+        background-color: rgba(0, 0, 0, 0);
+         }
+header{
+	min-height: 
+}
+
+.margin-top-medium-negative{
+	z-index: 1;
+	margin-top: -5.5em;
+}
