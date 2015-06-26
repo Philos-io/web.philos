@@ -14,6 +14,93 @@
 }
 
 /* ======================
+MARGIN, PADDING, Z-INDEX
+   ======================*/
+
+/* Margin */
+.margin-top-small-negative{
+	margin-top: -2.0rem;
+}
+
+.margin-top-medium-negative{
+	margin-top: -5.5rem;
+}
+
+.margin-top-high-negative{
+	margin-top: -10.5rem;
+}
+
+.margin-top-small{
+	margin-top: 2.5rem;
+}
+
+.margin-top-medium{
+	margin-top: 5.5rem;
+}
+
+.margin-top-high{
+	margin-top: 10.5rem;
+}
+
+/* PADDING */
+.padding-top-small-negative{
+	margin-top: -2.0rem;
+}
+
+.padding-top-medium-negative{
+	margin-top: -5.5rem;
+}
+
+.padding-top-high-negative{
+	margin-top: -10.5rem;
+}
+
+.padding-top-small{
+	margin-top: 2.0rem;
+}
+
+.padding-top-medium{
+	margin-top: 5.5rem;
+}
+
+.padding-top-high{
+	margin-top: 10.5rem;
+}
+
+
+/* Z-index */
+.raised-1{
+	z-index:1;
+}
+
+.raised-2{
+	z-index:2;
+}
+
+.raised-3{
+	z-index:3;
+}
+
+.raised-4{
+	z-index:4;
+}
+
+
+/* ======================
+POSTIONS
+   ======================*/
+.vertical-align{
+	vertical-align: middle;
+}
+
+/* ======================
+FONT
+   ======================*/
+.uppercase {
+    text-transform: uppercase;
+}
+
+/* ======================
 HEADER
    ======================*/
 
@@ -34,7 +121,11 @@ header{
 	min-height: 
 }
 
-.margin-top-medium-negative{
-	z-index: 1;
-	margin-top: -5.5em;
+/* ======================
+UPCOMING EVENTS	
+   ======================*/
+
+.upcoming-event:hover{
+  -webkit-filter: opacity(.85);
+  filter: opacity(.85);
 }
