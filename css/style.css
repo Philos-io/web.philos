@@ -63,10 +63,57 @@ MARGIN, PADDING, Z-INDEX
 	margin-top: 5.5rem;
 }
 
-.padding-top-high{
-	margin-top: 10.5rem;
+.padding-bottom-high{
+	margin-bottom: 10.5rem;
 }
 
+.padding-bottom-small{
+	margin-bottom: 2.0rem;
+}
+
+.padding-bottom-medium{
+	margin-bottom: 5.5rem;
+}
+
+.padding-bottom-high{
+	margin-bottom: 10.5rem;
+}
+
+.no-margin{
+	margin: 0;
+}
+
+.no-margin-bottom{
+	margin-bottom: 0;
+}
+
+.border-top-vsmall{
+	border-top: solid transparent 1.0rem;
+}
+
+.border-top-small{
+	border-top: solid transparent 2.0rem;
+}
+
+.border-top-medium{
+	border-top: solid transparent 5.5rem;
+}
+
+.border-top-high{
+	border-top: solid transparent 10.5rem;
+}
+
+.border-bottom-small{
+	border-bottom: solid transparent 2.0rem;
+}
+
+.border-bottom-medium{
+	border-bottom: solid transparent 5.5rem;
+}
+
+.border-bottom-high{
+	border-bottom: solid transparent 10.5rem;
+}
 
 /* Z-index */
 .raised-1{
@@ -93,6 +140,20 @@ POSTIONS
 	vertical-align: middle;
 }
 
+.vertical-container{
+	display: -webkit-flex;
+  	display:         flex;
+  	display:      ms-flex;
+  	-webkit-align-items: center;
+    align-items: center;
+  	-webkit-justify-content: center;
+    justify-content: center;
+}
+
+.img-centered {
+    margin: 0 auto;
+}
+
 /* ======================
 FONT
    ======================*/
@@ -100,16 +161,60 @@ FONT
     text-transform: uppercase;
 }
 
+.text-normal-plus{
+	font-size: 1.2rem;
+}
+
+.text-normal-minus{
+	font-size: 0.9rem;
+}
+
+.bold-1{
+	font-weight:200;
+}
+
+.bold-2{
+	font-weight:300;
+}
+
+.bold-3{
+	font-weight:400;
+}
+
+.bold-4{
+	font-weight:500;
+}
+
+.bold-5{
+	font-weight:700;
+}
+
+
+/* ======================
+COLOR
+   ======================*/
+
+.philos-organge{
+	color: #FF4C27;
+}
+
+/* ======================
+HR
+   ======================*/
+.small-line{
+	width: 10%;
+}
+
 /* ======================
 HEADER
    ======================*/
 
 .bg-photo{
-	background-image: url(../img/working.jpg);
+	background-image: url(../img/Shooting-L7.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
-/*	  background-position-x: 50%;
-  background-position-y: 30%;*/
+/*	  background-position-x: 30%;
+  background-position-y: 10%;*/
 }
 .active{
 	border-bottom: solid 2px white;
@@ -118,7 +223,7 @@ nav ul li:hover, nav ul li.active {
         background-color: rgba(0, 0, 0, 0);
          }
 header{
-	min-height: 
+	min-height: 35rem;
 }
 
 /* ======================
@@ -129,3 +234,100 @@ UPCOMING EVENTS
   -webkit-filter: opacity(.85);
   filter: opacity(.85);
 }
+
+/* ======================
+TESTIMONIALS
+   ======================*/
+.testimonial-height{
+	height: 10rem;
+}
+
+
+/* ======================
+FLEX
+   ======================*/
+
+.photo-left-top{
+	background-image: url(../img/performances2.jpg);
+    background-size: cover;
+    height: 12.5rem;
+    box-sizing: border-box;
+}
+
+.photo-left-bottom{
+	background-image: url(../img/event/harmony.jpg);
+    background-size: cover;
+    height: 12.5rem;
+    box-sizing: border-box;
+}
+
+.photo-left-left{
+	background-image: url(../img/event/react2.jpg);
+    background-size: cover;
+    height: 25rem;
+    box-sizing: border-box;
+}
+
+.photo-right{
+	background-color: teal;
+	height: 25rem;
+}
+
+/*html [layout][horizontal], html [layout][vertical] {
+	display: -webkit-flex;
+  	display:         flex;
+  	display:      ms-flex;
+}
+
+html [layout][vertical] {
+    flex-direction: column;
+}
+
+html [layout][horizontal] {
+    flex-direction: row;
+}
+
+html [flex][two] {
+    flex: 2 1 0;
+}
+html [flex] {
+    flex: 1 1 1e-9px;
+}
+
+.pics-section {
+    height: 600px;
+    width: 100%;
+    background-color: black;
+}
+
+.photo-home {
+	background-image: url(../img/working.jpg);
+    background-position: 50% 0;
+    background-size: cover;
+    min-width: 50%;
+}
+
+.photo-bottom {
+	background-image: url(../img/working.jpg);
+    background-position: 0 0;
+    background-size: cover;
+    min-height: 300px;
+}
+
+.photo-top {
+	background-image: url(../img/working.jpg);
+    background-position: 100% 0;
+    background-size: cover;
+    min-height: 300px;
+}
+.vertical-container{
+	display: -webkit-flex;
+  	display:         flex;
+  	display:      ms-flex;
+  	-webkit-align-items: center;
+    align-items: center;
+  	-webkit-justify-content: center;
+    justify-content: center;
+}
+*/
+
