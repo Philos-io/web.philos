@@ -154,6 +154,12 @@ POSTIONS
     margin: 0 auto;
 }
 
+
+@media only screen and (max-width : 992px){
+	.center-on-med-and-down{
+		text-align: center;
+		}
+}
 /* ======================
 FONT
    ======================*/
@@ -269,7 +275,7 @@ FLEX
 }
 
 .photo-right{
-	background-color: teal;
+/*	background-color: teal;*/
 	height: 25rem;
 }
 
@@ -331,3 +337,27 @@ html [flex] {
 }
 */
 
+/* ======================
+WIDTH
+   ======================*/
+.width-70{
+	width: 70%;
+}
+
+.width-100{
+	width: 100%;
+}
+
+
+
+/* ======================
+HEIGHT
+   ======================*/
+
+/*.top-card-height{
+	height: 10rem;
+}*/
+
+footer.page-footer {
+  margin-top: 0px;
+  }
