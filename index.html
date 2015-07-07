@@ -15,12 +15,14 @@
 <body>
 <header class="bg-photo">
     <nav class="transparent z-depth-0" role="navigation">
-      <div class="nav-wrapper container "><a id="logo-container" href="#" class="brand-logo hide-on-med-and-down">HELLO</a>
+      <div class="nav-wrapper">
+        <a id="logo-container" href="#" class="brand-logo hide-on-small-only"><img class="responsive-img border-top-vsmall padding-left-vsmall" src="img/logo/philos_logo-m.png"></a>
         <ul class="right hide-on-med-and-down">
           <li class="active"><a href="#">WHAT WE DO</a></li>
           <li><a href="#">ABOUT</a></li>
           <li><a href="#">BLOG</a></li>
           <li><a href="#">TEAM</a></li>
+          <li><a href="#" class="btn margin-right-vsmall">APPLY</a></li>
         </ul>
 
         <ul id="nav-mobile" class="side-nav">
@@ -28,9 +30,10 @@
           <li><a href="#">ABOUT</a></li>
           <li><a href="#">BLOG</a></li>
           <li><a href="#">TEAM</a></li>
+          <li><a href="#" class="btn">APPLY</a></li>
         </ul>
-        <a href="#" data-activates="nav-mobile" class="brand-logo hide-on-large-only">Logooooo</a>
-        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+        <a href="#" data-activates="nav-mobile" class="brand-logo hide-on-med-and-up"><img class="responsive-img border-top-vsmall" src="img/logo/philos_logo-m.png"></a>
+        <a href="#" data-activates="nav-mobile" class="button-collapse margin-left-vsmall"><i class="fa fa-bars fa-lg"></i></a>
       </div>
     </nav>
 
@@ -38,11 +41,12 @@
   <div class="section no-pad-bot" id="index-banner">
     <div class="container">
       <br><br>
-      <h1 class="header center white-text">Level Up your JavaScript skills</h1>
+      <h1 class="header center white-text padding-top-small">Level Up your JavaScript skills</h1>
+<!--       <h6 class="header center white-text">Join intensive bootcamps to master JS technologies</h6>
       <br><br>
       <div class="row center">
         <a href="#" class="btn waves-effect waves-teal">Apply</a>
-      </div>
+      </div> -->
       <br><br><br><br>
     </div>
   </div>
@@ -56,18 +60,17 @@
         <div class="col s12 m12">
           <div class="card">
             <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
+              <p class="text-normal-plus">Philos is a JavaScript Lab. We are on a mission to get you on the bleeding edge. Apply for our intensive bootcamps to learn how to unleash the full potential of JavaScript technologies.</p>
             </div>
             <div class="card-action">
-              <a class="teal-text vertical-align" href="#"><i class="small material-icons vertical-align">check</i>&nbsp;&nbsp;Apply for the next session</a>
+              <a class="philos-orange align-middle" href="#">Apply for the next session</a>
             </div>
           </div>
         </div>
       </div>
 
       <div >
-        <h4 class="grey-text text-darken-3 margin-top-medium">Upcoming Events</h4>
+        <h4 class="grey-text text-darken-3 margin-top-medium">Upcoming Workshops & Events</h4>
       </div>
 
 
@@ -76,18 +79,17 @@
 
          <!--   Card 1   -->
          <a class="upcoming-event" href="#">
-            <div class="col s12 m4">
+            <div class="col s12 m6 l4">
               <div class="card">
                 <div class="card-image">
-                  <img class="responsive-img" src="img/working-card.jpg">
+                  <img class="responsive-img" src="img/working.jpg">
                 </div>
-                <div class="card-content">
-                  <p class="grey-text text-darken-2 uppercase">1 WEEK INTENSIVE BOOTCAMP</p>
-                  <span class="grey-text text-lighten-1 ">Deep dive & coding frenzy in JavaScript (ES6 included) and Angular</span>
-                  <div class="vertical-align padding-top-small">
-                    <i class="tiny material-icons vertical-align grey-text text-lighten-1">today</i>
-                    <span class="vertical-align grey-text text-lighten-1">14th September</span>
-                    <span class="right vertical-align orange-text text-darken-2 uppercase">2400€</span>
+                <div class="card-content card-height">
+                  <p class="grey-text text-darken-2 uppercase card-title1">1 WEEK INTENSIVE BOOTCAMP</p>
+                  <p class="grey-text text-lighten-1 card-title2">Deep dive in JavaScript (ES6 included) and Angular</p>
+                  <div class="align-middle padding-top-small text-normal-minus">
+                    <span class="grey-text text-lighten-1"><i class="fa fa-calendar"></i>&nbsp;14th - 19th Sept.</span>
+                    <span class="right align-middle philos-teal uppercase">2400€</span>
                   </div>
                 </div>
               </div>
@@ -95,38 +97,36 @@
           </a>
           <!--  Card 2   -->
           <a class="upcoming-event" href="#">
-            <div class="col s12 m4">
-              <div class="card upcoming-event">
+            <div class="col s12 m6 l4">
+              <div class="card">
                 <div class="card-image">
                   <img class="responsive-img" src="img/angularjs.png">
-                </div>
-                <div class="card-content">
-                  <p class="grey-text text-darken-2 uppercase">performances & seo in angular</p>
-                  <span class="grey-text text-lighten-1">Conference held @De Persgroep</span>
-                  <div class="vertical-align padding-top-small">
-                    <i class="tiny material-icons vertical-align grey-text text-lighten-1">today</i>
-                    <span class="vertical-align grey-text text-lighten-1">28th September - 6pm</span>
-                    <span class="right vertical-align orange-text text-darken-2 uppercase">free</span>
+                </div> 
+                <div class="card-content card-height">
+                  <p class="grey-text text-darken-2 uppercase card-title1">performances & seo in angular</p>
+                  <p class="grey-text text-lighten-1 card-title2">Conference held @De Persgroep</p>
+                  <div class="align-middle padding-top-small text-normal-minus">
+                    <span class="grey-text text-lighten-1"><i class="fa fa-calendar"></i>&nbsp;28th Sept. - 6pm</span>
+                    <span class="right align-middle philos-teal uppercase">free</span>
                   </div>
                 </div>
               </div>
             </div>
-          </a>
+          </a>        
 
           <!--  Card 3   -->
-          <a class="upcoming-event" href="#">
-            <div class="col s12 m4 upcoming-event">
+          <a class="upcoming-event hide-on-med-only" href="#">
+            <div class="col s12 m6 l4">
               <div class="card">
                 <div class="card-image">
                   <img class="responsive-img" src="img/belgium-react.png">
                 </div>
-                <div class="card-content">
-                  <p class="grey-text text-darken-2 uppercase">touch base react</p>
-                  <span class="grey-text text-lighten-1 ">1st react meetup</span>
-                  <div class="vertical-align padding-top-small">
-                    <i class="tiny material-icons vertical-align grey-text text-lighten-1">today</i>
-                    <span class="vertical-align grey-text text-lighten-1">29th September - 9pm</span>
-                    <span class="right vertical-align grey-text text-lighten-1 uppercase">free</span>
+                <div class="card-content card-height">
+                  <p class="grey-text text-darken-2 uppercase card-title1">touch base react</p>
+                  <p class="grey-text text-lighten-1 card-title2">1st react meetup</p>
+                  <div class="align-middle padding-top-small text-normal-minus">
+                    <span class="grey-text text-lighten-1"><i class="fa fa-calendar"></i>&nbsp;29th Sept. - 9pm</span>
+                    <span class="right philos-teal uppercase">free</span>
                   </div>
                 </div>
               </div>
@@ -134,13 +134,45 @@
           </a>
 
         </div> <!--  ROW   -->
-        <div class="row padding-bottom-medium">
-           <div class="col s12 center">
+
+        <!--  Medium view   -->
+        <div class="row hide-on-large-only hide-on-small-only">
+
+          <a class="upcoming-event" href="#">
+            <div class="col s12 m6 l4">
+              <div class="card">
+                <div class="card-image">
+                  <img class="responsive-img" src="img/belgium-react.png">
+                </div>
+                <div class="card-content card-height">
+                  <p class="grey-text text-darken-2 uppercase card-title1">touch base react</p>
+                  <p class="grey-text text-lighten-1 card-title2">1st react meetup</p>
+                  <div class="align-middle padding-top-small text-normal-minus">
+                    <span class="grey-text text-lighten-1"><i class="fa fa-calendar"></i>&nbsp;29th Sept. - 9pm</span>
+                    <span class="right philos-teal uppercase">free</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <div class="col m6 hide-on-large-only hide-on-small-only padding-top-medium">
               <p class="text-normal-plus">We love to mingle with the tech community. Check out the full list of upcoming and past events!
               <br>
-              <a href="#"><span class="teal-text">SEE ALL EVENTS</span></a>
               </p>
+              <p class="text-normal-plus  center">
+                <a href="#"><span class="philos-orange uppercase">SEE ALL EVENTS</span></a>
+              </p>
+          </div>
 
+        </div> <!--  ROW   -->
+
+        <div class="row padding-bottom-medium">
+           <div class="col s12 center hide-on-med-only">
+              <p class="text-normal-plus">We love to mingle with the tech community. Check out the full list of upcoming and past events!
+              <br>
+              <a href="#"><span class="philos-orange uppercase">SEE ALL EVENTS</span></a>
+              </p>
             </div>
         </div>
     </div> <!--  SECTION   -->
@@ -148,7 +180,7 @@
 </div> <!--  GREY LIGHT   -->
 
       <!--   TRUST   -->
-        <div class="deep-orange darken-3">
+        <div class="philos-teal-bg">
           <div class="row no-margin border-bottom-small border-top-vsmall">
             <div class="col m2 s6">
                 <a href="http://mediahuis.be/" target="_blank">
@@ -187,12 +219,12 @@
 
             <div class="col s12 m4 photo-right"> 
                     <div class="left">
-                        <p class="text-normal-plus padding-top-small testimonial-height">"Philos' training was amazing. It didn't only gave me the tools I needed to build my Angular project, it gave me a deep understanding of the framework and the JS concepts related to it. Plus the team is really passionate which makes the workshop even more enjoyable"</p>
+                        <p class="text-normal-plus padding-top-small testimonial-height">"A passionate team and a high value training. Philos' workshop was amazing. It didn't only gave me the tools I needed to build my Angular project, it gave me a deep understanding of the framework and the JS concepts related to it.</p>
                     </div>
                     <hr class="small-line">
                     <div class="row">
                         <div class="col s8">                   
-                            <p class="padding-top-small center">Juan S. <br>Web Developer @<a href="https://assis.to/" target="_blank">Assisto</a></p>
+                            <p class="padding-top-small center">Juan S. <br>Web Developer at <a href="https://assis.to/" target="_blank" class="philos-teal">Assisto</a></p>
                         </div>
                         <di class="col s4">
                           <img src="img/davy.jpg" alt="" class="circle responsive-img right">
@@ -214,8 +246,7 @@
               <p>We love to mingle with the tech community. Check out the full list of upcoming and past events!</p>
             </div>
             <div class="card-action">
-              <a class="teal-text vertical-align" href="#">SEE THE FULL WEEK PROGRAM</a>
-              <a class="teal-text vertical-align" href="#">SEE ALL EVENTS</a>
+              <a class="philos-orange align-middle" href="#">SEE THE FULL WEEK PROGRAM</a>
             </div>
           </div>
         </div>
@@ -231,6 +262,86 @@
       </div>
     </div>
 
+    <div class="container">
+      <div class="row margin-top-small">
+          <div class="col s12 m6">
+                  <div>
+                      <p class="left no-margin-bottom text-normal-plus bold-4">State of the art curriculum</p>
+                  </div>
+                  <div>
+                      <p class="left grey-text text-darken-3">
+                           We focus on bleeding edge technologies that will stay for years. We saw the potential of JavaScript years ago, we were right. JavaScript has gone <a href="#">big</a> and is growing bigger every day/it is even becoming <a href="#">the norm these days</a>. From IoT to real-time interactive apps ; from back end to front end - <a href="#">JavaScript covers it all</a>. Don't miss the bus.
+                      </p>
+                  </div>
+          </div>
+          <div class="col s12 m6">
+                  <div>
+                       <p class="left no-margin-bottom text-normal-plus bold-4">Amazing instructors</p>
+                  </div>
+                  <div>
+                      <p class="left grey-text text-darken-3">
+                           Our instructors are sofware engineers and passionate developers who love to teach and who are incredibly good at it. They have embraced JavaScript years ago and have been lead engineers in top companies as well as in startups. They will provide you with what you need to raise your skills to the next level.    
+                      </p>
+                  </div>
+          </div>
+        </div><!-- ROW -->
+        <div class="row">
+          <div class="col s12 m6">
+                  <div>
+                       <p class="left no-margin-bottom text-normal-plus bold-4">Hands-on - Project based</p>
+                  </div>
+                  <div>
+                      <p class="left grey-text text-darken-3">
+                           We are strong believers in the <strong>learning by doing</strong>. This is why our workshops are mostly hands-on and project based. You will get to work in pairs, experiment and hack the latest technologies to truly experience and understand the language you will be working on. 
+                      </p>
+                  </div>
+          </div>
+          <div class="col s12 m6">
+                  <div>
+                       <p class="left no-margin-bottom text-normal-plus bold-4">High quality matters</p>
+                  </div>
+                  <div>
+                      <p class="left grey-text text-darken-3">
+                           The hours spent at Philos are neuron-intensive, high quality hours. We always aim for small teams to foster communication between participants and encourage interactions with instructors. We've built an ultra pertinent curriculum thanks to our amazing community and the invaluable feedback from former participants.        
+                      </p>
+                  </div>
+          </div>
+        </div><!-- ROW -->
+        <div class="row">
+          <div class="col s12 m6">
+                  <div>
+                       <p class="left no-margin-bottom text-normal-plus bold-4">Immersive environment</p>
+                  </div>
+                  <div>
+                      <p class="left grey-text text-darken-3">
+                           What we offer you at Philos is an immersive environment with passionate developers like you who have a thirst for knowledge. With our events, we encourage our former students and the tech community to meet, talk and dream about tech. Coming at Philos will be like going to Rome to learn Italian, a fully immersive experience. 
+                      </p>
+                  </div>
+          </div>
+          <div class="col s12 m6">
+                  <div>
+                       <p class="left no-margin-bottom text-normal-plus bold-4">Top students & great community</p>
+                  </div>
+                  <div>
+                      <p class="left grey-text text-darken-3">
+                           Philo's workshops are intense. Students attending them are passionate and dedicated to improving their coding skills. Even after the course's normal hours, most of our students find themselves staying much longer to talk about the future of technology or the last feature they've added to their project.    
+                      </p>
+                  </div>
+          </div>
+        </div><!-- ROW -->
+    </div><!-- CONTAINER -->
+
+    <div class="container margin-top-small padding-bottom-medium">
+            <div class="col s12">
+                <p class="text-normal-plus center">Make the choice that will put you on the fast track. Stay ahead of the game. 
+                <br>
+                </p>
+                <p class="text-normal-plus  center">
+                  <a href="#"><span class="philos-orange uppercase">APPLY FOR THE BOOTCAMP</span></a>
+                </p>
+            </div>
+    </div>
+<!--    
     <div class="container">
       <div class="row vertical-container margin-top-medium">
         <div class="col s3">
@@ -253,8 +364,7 @@
                     <img src="img/services/icons_workshops.png" class="img-thumbnail" alt="">
                 </div>
                 <div>
-                    <h5 class="center philos-organge">Workshops</h5>
-                    <!--<h5>Skills builder</h5>-->
+                    <h5 class="center philos-orange">Workshops</h5>
                 </div>
                 <div>
                     <p class="left grey-text text-darken-1">
@@ -269,17 +379,13 @@
                 </div>
 
                 <div>
-                    <h5 class="center philos-organge">Conferences</h5>
-                    <!--<h5>One Day One Tech</h5>-->
+                    <h5 class="center philos-orange">Conferences</h5>
                 </div>
                 <div>
                     <p class="left grey-text text-darken-1">
                         Get a concise update on the evolution of technology and testimonials from experts on their experience building products with those technologies. Take back to your team the insights on how to approach advanced topics like performances, testing or accessibility to help them drive innovation.
                     </p>
                 </div>
-                <!-- <div>
-                    <a href="" data-ng-click="main.goTo('contact')" class="btn btn-philos btn-lg">Contact Us</a>
-                </div> -->
         </div>
         <div class="col s12 m4">
 
@@ -287,26 +393,22 @@
                     <img src="img/services/icons_lab.png" class="img-thumbnail" alt="">
                 </div>
                 <div>
-                    <h5 class="center philos-organge">Philos LAB</h5>
-                    <!--<h5>Stay ahead</h5>-->
+                    <h5 class="center philos-orange">Philos LAB</h5>
                 </div>
                 <div>
                     <p class="left grey-text text-darken-1">
                         Technology doesn't stand still and neither do we. We combine the latest technologies, lean design and breakthrough thinking in our experiments to extract the best of it for you. We strive for the bleeding edge to ensure you stay ahead of the game.                         
                     </p>
                 </div>
-                <!-- <div>
-                    <a href="" data-ng-click="main.goTo('contact')" class="btn btn-philos btn-lg">Contact Us</a>
-                </div> -->
         </div>
       </div>
 
-    </div><!-- CONTAINER -->
+    </div> --><!-- CONTAINER -->
 
   </section>
 
 
-  <footer class="page-footer blue-grey lighten-3">
+  <footer class="page-footer blue-grey darken-3">
     <div class="container">
       <div class="row white-text">
         <div class="col s12 m6 l4">
@@ -316,7 +418,7 @@
               <li>4 Rue des pères blancs</li>
               <li>1040 Brussels</li>
               <br>
-              <li><a href="#!"><span class="teal-text">Contact us <i class="small material-icons vertical-align">send</i></span></a></li>
+              <li><a href="#!"><span class="philos-orange">Contact us <i class="fa fa-paper-plane-o"></i></span></a></li>
             </ul>
         </div>
         <div class="col s6 m3 l2">

@@ -42,41 +42,24 @@ MARGIN, PADDING, Z-INDEX
 	margin-top: 10.5rem;
 }
 
-/* PADDING */
-.padding-top-small-negative{
-	margin-top: -2.0rem;
+.margin-bottom-small{
+	margin-bottom: 2.5rem;
 }
 
-.padding-top-medium-negative{
-	margin-top: -5.5rem;
-}
-
-.padding-top-high-negative{
-	margin-top: -10.5rem;
-}
-
-.padding-top-small{
-	margin-top: 2.0rem;
-}
-
-.padding-top-medium{
-	margin-top: 5.5rem;
-}
-
-.padding-bottom-high{
-	margin-bottom: 10.5rem;
-}
-
-.padding-bottom-small{
-	margin-bottom: 2.0rem;
-}
-
-.padding-bottom-medium{
+.margin-bottom-medium{
 	margin-bottom: 5.5rem;
 }
 
-.padding-bottom-high{
+.margin-bottom-high{
 	margin-bottom: 10.5rem;
+}
+
+.margin-left-vsmall{
+	margin-left: 1.0rem;
+}
+
+.margin-right-vsmall{
+	margin-right: 1.0rem;
 }
 
 .no-margin{
@@ -86,6 +69,52 @@ MARGIN, PADDING, Z-INDEX
 .no-margin-bottom{
 	margin-bottom: 0;
 }
+
+/* PADDING */
+.padding-top-small-negative{
+	padding-top: -2.0rem;
+}
+
+.padding-top-medium-negative{
+	padding-top: -5.5rem;
+}
+
+.padding-top-high-negative{
+	padding-top: -10.5rem;
+}
+
+.padding-top-small{
+	padding-top: 2.0rem;
+}
+
+.padding-top-medium{
+	padding-top: 5.5rem;
+}
+
+.padding-bottom-high{
+	padding-bottom: 10.5rem;
+}
+
+.padding-bottom-small{
+	padding-bottom: 2.0rem;
+}
+
+.padding-bottom-medium{
+	padding-bottom: 5.5rem;
+}
+
+.padding-bottom-high{
+	padding-bottom: 10.5rem;
+}
+
+.padding-left-vsmall{
+	padding-left: 1.0rem;
+}
+
+.padding-right-vsmall{
+	padding-right: 1.0rem;
+}
+
 
 .border-top-vsmall{
 	border-top: solid transparent 1.0rem;
@@ -136,8 +165,13 @@ MARGIN, PADDING, Z-INDEX
 /* ======================
 POSTIONS
    ======================*/
-.vertical-align{
+.align-middle{
 	vertical-align: middle;
+}
+
+.align-bottom{
+	position: absolute;
+    bottom: 0;
 }
 
 .vertical-container{
@@ -200,10 +234,17 @@ FONT
 COLOR
    ======================*/
 
-.philos-organge{
+.philos-orange{
 	color: #FF4C27;
 }
 
+.philos-teal{
+	color: #00b36e;
+}
+
+.philos-teal-bg{
+	background-color: #00b36e;
+}
 /* ======================
 HR
    ======================*/
@@ -239,6 +280,7 @@ UPCOMING EVENTS
 .upcoming-event:hover{
   -webkit-filter: opacity(.85);
   filter: opacity(.85);
+  -moz-filter: opacity(.85);
 }
 
 /* ======================
@@ -348,16 +390,33 @@ WIDTH
 	width: 100%;
 }
 
-
-
 /* ======================
 HEIGHT
    ======================*/
 
-/*.top-card-height{
-	height: 10rem;
-}*/
+.card-height{
+	height: 11rem;
+}
 
 footer.page-footer {
   margin-top: 0px;
   }
+
+/* ======================
+CARD HEIGHT
+   ======================*/
+
+  .card-title1{
+  	min-height: 3rem;
+  }
+
+  .card-title2{
+  	min-height: 3rem;
+  }
+
+/* ======================
+BUTTON
+   ======================*/
+.btn{
+	background-color: #FF4C27;;
+}
