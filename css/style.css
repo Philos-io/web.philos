@@ -95,6 +95,10 @@ MARGIN, PADDING, Z-INDEX
 	padding-top: 5.5rem;
 }
 
+.padding-top-high{
+	padding-top: 10.5rem;
+}
+
 .padding-bottom-high{
 	padding-bottom: 10.5rem;
 }
@@ -281,6 +285,10 @@ COLOR
 	color: #00b36e;
 }
 
+.philos-grey{
+	color: #37474f ;
+}
+
 .philos-teal-bg{
 	background-color: #00b36e;
 }
@@ -309,7 +317,7 @@ nav ul li:hover, nav ul li.active {
         background-color: rgba(0, 0, 0, 0);
          }
 header{
-	min-height: 35rem;
+	/*min-height: 35rem;*/
 }
 
 /* ======================
@@ -317,9 +325,10 @@ UPCOMING EVENTS
    ======================*/
 
 .upcoming-event:hover{
-  -webkit-filter: opacity(.85);
-  filter: opacity(.85);
-  -moz-filter: opacity(.85);
+-webkit-opacity: 0.85;
+  opacity: 0.85;
+  -moz-opacity: 0.85;
+  
 }
 
 /* ======================
@@ -474,4 +483,41 @@ nav .button-collapse i {
 .top-nav{
 	min-height: 5rem;
 	background-color: #37474f;
+}
+
+.nav-bg{
+	min-height: 5rem;
+	background-color: #37474f;
+}
+
+/* ======================
+ACCORDION
+   ======================*/
+.collapsible-header{
+	height: auto;
+}
+
+.collapsible-header.active{
+	background-color: #37474f;
+	color: white;
+}
+
+/*.collapsible-header.active i{
+	color: #00b36e;
+}*/
+
+.collapsible-body{
+	background-color: white;
+}
+
+/* ======================
+GOOGLE MAPS
+   ======================*/
+
+#map-canvas{
+	min-height: 20rem;
+}
+
+#explanation{
+	min-height: 20rem;
 }
