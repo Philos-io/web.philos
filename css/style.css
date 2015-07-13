@@ -127,6 +127,17 @@ MARGIN, PADDING, Z-INDEX
 	padding-right: 1.0rem;
 }
 
+.padding-right-small{
+	padding-right: 2.0rem;
+}
+
+.padding-left-small{
+	padding-left: 2.0rem;
+}
+
+.no-padding{
+	padding: 0;
+}
 
 .border-top-vsmall{
 	border-top: solid transparent 1.0rem;
@@ -289,8 +300,16 @@ COLOR
 	color: #37474f ;
 }
 
+.philos-orange-bg{
+	background-color: #FF4C27;
+}
+
 .philos-teal-bg{
 	background-color: #00b36e;
+}
+
+.philos-grey-bg{
+	background-color: #37474f;
 }
 /* ======================
 HR
@@ -369,6 +388,45 @@ FLEX
 	/*height: 25rem;*/
 }
 
+.aligner {
+	display: -webkit-flex;
+  	display:         flex;
+  	display:      ms-flex;
+  	align-items: center;
+  	justify-content: center;
+}
+
+.aligner-item {
+  	max-width: 50%;
+}
+
+.aligner-item--top {
+  	align-self: flex-start;
+}
+
+.aligner-item--bottom {
+  	align-self: flex-end;
+}
+
+.flew-column{
+	display: -webkit-flex;
+  	display:         flex;
+  	display:      ms-flex;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+   	flex-direction: column;
+}
+
+.flew-row{
+	display: -webkit-flex;
+  	display:         flex;
+  	display:      ms-flex;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+   	flex-direction: row;
+}
+
+
 /*html [layout][horizontal], html [layout][vertical] {
 	display: -webkit-flex;
   	display:         flex;
@@ -446,14 +504,6 @@ HEIGHT
 	height: 11rem;
 }
 
-footer.page-footer {
-  margin-top: 0px;
-  }
-
-/* ======================
-CARD HEIGHT
-   ======================*/
-
   .card-title1{
   	min-height: 3rem;
   }
@@ -461,6 +511,26 @@ CARD HEIGHT
   .card-title2{
   	min-height: 3rem;
   }
+
+footer.page-footer {
+  margin-top: 0px;
+  }
+
+.mission-height{
+	min-height: 11rem;
+}
+
+.about-height-1{
+	min-height: 44rem;
+}
+
+.about-height-2{
+	min-height: 22rem;
+}
+
+.about-height-3{
+	min-height: 12rem;
+}
 
 /* ======================
 BUTTON
@@ -520,4 +590,28 @@ GOOGLE MAPS
 
 #explanation{
 	min-height: 20rem;
+}
+
+
+/* ======================
+ABOUT PAGE
+   ======================*/
+
+
+.bg-about-1{
+	background-image: url(../img/Shooting-L7.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.bg-about-2{
+	background-image: url(../img/Team-BW.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position-x: 60%;
+  	background-position-y: 10%;
+}
+
+.height-title{
+	height: 5rem;
 }
