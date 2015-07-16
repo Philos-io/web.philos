@@ -9,240 +9,421 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-
-  <style>
-    #intro{
-      height: 200px;
-    }
-
-    #intro-lab{
-
-    }
-
-    #dailyProgram{
-      height: 500px;
-    }
-
-    #pricing{
-      height: 100px;
-    }
-    img{
-      height: 50px;
-      width: 50px;
-    }
-
-    .keypoints{
-      margin: 0px;
-    }
-  </style>
+  <!-- FONT AWESOME  -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 </head>
 <body>
-  <header class="bg-photo">
-      <nav class="#fafafa grey lighten-5 blue-text text-darken-2">
-      <div class="nav-wrapper ">
-        <a href="#" class="brand-logo">Logo</a>
-        
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a class="waves-effect waves-light btn blue right">Apply</a></li>
-          <li><a href="program.html">Program</a></li>
-          <li><a href="index.html">Home</a></li>
+<header class="bg-photo-1 head-height">
+    <nav class="transparent z-depth-0" role="navigation">
+      <div class="nav-wrapper">
+        <a id="logo-container" href="#" class="brand-logo hide-on-med-and-down"><img class="responsive-img border-top-vsmall padding-left-vsmall" src="img/logo/philos_logo-m.png"></a> <!-- HIDDEN MED + SMALL -->
+        <ul class="right hide-on-med-and-down">       <!-- HIDDEN MED + SMALL -->
+          <li class="active"><a href="#">WHAT WE DO</a></li>
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="#">BLOG</a></li>
+          <li><a href="#">TEAM</a></li>
+          <li><a href="#" class="btn margin-right-vsmall">APPLY NOW</a></li>
         </ul>
+
+        <ul id="nav-mobile" class="side-nav">
+          <li><a href="#">WHAT WE DO</a></li>
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="#">BLOG</a></li>
+          <li><a href="#">TEAM</a></li>
+        </ul>
+        <div class="top-nav hide-on-large-only hide-on-small-only"> <!-- HIDDEN SMALL -->
+          <div class="top border-top-vsmall">
+            <a href="#" data-activates="nav-mobile" class="brand-logo"><img class="responsive-img" src="img/logo/philos_logo-s.png"></a>
+            <a href="#" data-activates="nav-mobile" class="button-collapse margin-left-vsmall"><i class="fa fa-bars fa-lg"></i></a>
+          </div>
+          <div class="mid-top border-top-vsmall">
+            <a href="#" class="btn right margin-right-vsmall ">APPLY NOW</a>
+          </div>
+        </div>
+        <div class="top-nav hide-on-med-and-up"> <!-- HIDDEN MED + LARGE -->
+          <div class="row no-margin-bottom">
+            <div class="top border-top-vsmall col s12">
+              <a href="#" data-activates="nav-mobile" class="brand-logo"><img class="responsive-img" src="img/logo/philos_logo-s.png"></a>
+              <a href="#" data-activates="nav-mobile" class="button-collapse margin-left-vsmall"><i class="fa fa-bars fa-lg"></i></a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="mid-top col s12">
+              <a href="#" class="btn width-100 margin-right-vsmall ">APPLY NOW</a>
+            </div>
+          </div>
+        </div>
       </div>
     </nav>
-  </header>
-
-  <section id="intro" class="blue valign-wrapper">
-      
-      <h5 class="center-align white-text flow-text" style="margin:auto; font-size:30px">Become a productive JavaScript & AngularJS Software Engineer</h5>
-      
-  </section>
-  
-  <section id="intro-lab">
-
-      <div class="row container">
-        <div class="col s12 m12">
-          <div class="card-panel z-depth-1">
-            <span class="blue-text">
-              <strong>Our Mission:</strong> You’ll begin Hack Reactor with a feeling of excitement and anticipation. Twelve weeks later, you’ll follow the footsteps of our trailblazing alumni, taking the methodologies and best practices you perfected at our coding bootcamp to your next job. We’ve built world class software engineering curriculum and programming courses. However, Hack Reactor is, above all else, a world-class learning environment.
-            </span>
-          </div>
-        </div>
-      </div>
 
 
+    <div>
       <div class="container">
-        <div class="section">
-
-          <!--   Icon Section   -->
-          <div class="row">
-            <div class="col s12 m4 z-depth-1 keypoints">
-              <div class="icon-block">
-                <h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
-                <h5 class="center">Mentorship</h5>
-
-                <p class="light">Our mentors will come during the bootcamp to share with you in a very close groups their experience. You will able to get insight of the what is being an JavaScript engineer.</p>
-              </div>
-            </div>
-
-            <div class="col s12 m4 z-depth-0 keypoints">
-              <div class="icon-block">
-                <h2 class="center light-blue-text"><i class="material-icons">group</i></h2>
-                <h5 class="center">Pair Programming</h5>
-
-                <p class="light">2 screens and 2 keyboards connected to the same computer. This is where our program shines. You'll get to code on a projects with your pairs. You'll learn how to lead a development process.</p>
-              </div>
-            </div>
-
-            <div class="col s12 m4 z-depth-1 keypoints">
-              <div class="icon-block">
-                <h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
-                <h5 class="center">Hacking</h5>
-
-                <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback.</p>
-              </div>
-            </div>
-          </div>
-
-        </div>
+        <br/><br/>
+        <h4 class="left white-text padding-top-high">Become a productive JavaScript & AngularJS Software Engineer</h4>
       </div>
-
-
-  </section>
-
-  <section id="dailyProgram" class="blue">
-      
-      
-      <div class="row container">
-          
-          <h5 class="center-align white-text" style="margin:auto; font-size:30px">A day in our Lab!</h5>
-
-          <ul class="collection">
-            <li class="collection-item avatar">
-              <img src="images/code.png" alt="" class="circle">
-              <p>First Line </p>
-              <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-            </li>
-            <li class="collection-item avatar">
-              <img src="images/code.png" alt="" class="circle">
-              <p>First Line </p>
-              <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-            </li>
-            <li class="collection-item avatar">
-              <img src="images/code.png" alt="" class="circle">
-              <p>First Line </p>
-              <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-            </li>
-            <li class="collection-item avatar">
-              <img src="images/code.png" alt="" class="circle">
-              <p>First Line </p>
-              <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-            </li>
-            <li class="collection-item avatar">
-              <img src="images/code.png" alt="" class="circle">
-              <p>First Line </p>
-              <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-            </li>
-          </ul>
-      </div>
-  </section>
-
-  <section class="valign-wrapper">
-      
-    <div class="row">
-        <div class="col s12 m4">
-          <div class="card-panel teal">
-            <span class="white-text">DAY 1</span>
-          </div>
-        </div>
-        <div class="col s12 m4">
-          <div class="card-panel teal z-depth-1">
-            <span class="white-text">DAY 2</span>
-          </div>
-        </div>
-        <div class="col s12 m4">
-          <div class="card-panel teal z-depth-2">
-            <span class="white-text">DAY 3</span>
-          </div>
-        </div>
-    
-        <div class="col s12 m4">
-          <div class="card-panel teal z-depth-3">
-            <span class="white-text">DAY 4</span>
-          </div>
-        </div>
-        <div class="col s12 m4">
-          <div class="card-panel teal z-depth-4">
-            <span class="white-text">DAY 5</span>
-          </div>
-        </div>
-        <div class="col s12 m4">
-          <div class="card-panel teal z-depth-5">
-            <span class="white-text">DAY 6</span>
-          </div>
-        </div>
-
     </div>
-  </section>
 
+</header>
 
-  <section id="pricing" class="blue">
-    
+      <div class="hide-on-med-and-up white padding-top-vsmall padding-bottom-vsmall"> <!-- HIDDEN MED + UP -->
+        <div class="row">
+          <div class="col s12">
+              <div class="text-normal-plus">
+                <p>Philos’ intensive bootcamp is aimed at <strong>developers</strong>. You will learn how to raise your skills to the next level by using the best, state of the art tools and technologies in the industry.<br/><br/> 
+                In a world where super-fast, interactive application are the new standard, JavaScript is an invaluable asset for any developer. Once mastered, possibilities are endless: IoT, front end, back end, native mobile app, robotic.<br/><br/> 
+                We will train you to not only comprehend JavaScript and AngularJS, but also inculcate a desire for discovery and learning that will keep you on the bleeding edge through the generations of new technologies that will appear over time. 
+                </p>
+              </div>
+              <div class="">
+                <a class="philos-orange uppercase" href="#">Apply for the bootcamp</a>
+              </div>
+            </div>
+          </div>
+      </div>
 
-  </section>
-
-  <!-- <div class="section no-pad-bot" id="index-banner">
+  <section class="grey lighten-4">
     <div class="container">
-      <br><br>
-      <h1 class="header center orange-text">Starter Template</h1>
-      <div class="row center">
-        <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
-      </div>
-      <div class="row center">
-        <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light orange">Get Started</a>
-        <a href="#!" class="btn waves-effect waves-teal">Send</a>
-      </div>
-      <br><br>
+      <div class="section">
 
+        <div class="row margin-top-medium-negative raised-1 hide-on-small-only"> <!-- HIDDEN SMALL -->
+          <div class="col s12 m12">
+            <div class="card">
+              <div class="card-content">
+                <p class="text-normal-plus">Philos’ intensive bootcamp is aimed at <strong>developers</strong>. You will learn how to raise your skills to the next level by using the best, state of the art tools and technologies in the industry.<br/><br/> 
+                  In a world where super-fast, interactive application are the new standard, JavaScript is an invaluable asset for any developer. Once mastered, possibilities are endless: IoT, front end, back end, native mobile app, robotic.<br/><br/>  
+                  We will train you to not only comprehend JavaScript and AngularJS, but also inculcate a desire for discovery and learning that will keep you on the bleeding edge through the generations of new technologies that will appear over time.
+                  </p>
+              </div>
+              <div class="card-action">
+                <a class="philos-orange uppercase" href="#">Apply for the bootcamp</a>
+              </div>
+            </div>
+          </div>
+        </div>
+       </div>
+     </div>
+  </section>
+
+<!--   <div class="row ">
+    <div class="col l4 photo-left-left-1 hide-on-med-and-down">    
     </div>
+    <div class="col s12 m6 l4 photo-left-bottom hide-on-small-only"></div>           
+    <div class="col s12 m6 l4 photo-left-top"></div> 
   </div> -->
 
+  <section class="grey lighten-4 padding-bottom-high">
+      <div class="container">
+        <div class="row">
+          <div class="col s12">
+             <h4 class="grey-text text-darken-3 margin-top-medium">The Curriculum</h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12">
+            <p>Philos’ bootcamp is aimed at <strong>developers</strong>, whether you are a freelancer or part of a company, it doesn’t matter. All participants should master at least one language other than JavaScript (Java, PHP, C#, C++, Python, Scala, Go ...). Each candidate go through an admission process. This process allows us to determine if you have the necessary skills to attend the bootcamp. It also helps us group cohorts according to their level, which improves both productivity and the learning experience of each participant.</p>
+            <p>The 1-week bootcamp lasts <strong>6 days</strong>. From Monday to Saturday. However, only 5 days are mandatory. Consider the Saturday as a bonus day where you get the chance to push what you learned during the week even further. Even though it is not mandatory, until now all our participants attended the last session.</p>
+            <p>The day starts at <strong>8.30 am</strong> and finishes officially at <strong>6 pm</strong>. Instructors will stay until <strong>9 pm</strong> to help participants further in their projects, answer any questions participants might have or dig deeper in the material. The breakdown of a typical day is explained  <a href="#daystructure" class="philos-teal">below</a></p>                   
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12 m6 l4">
+                <div class="card">
+                  <div class="card-content card-height-1">
+                    <p class="uppercase card-title1">JAVASCRIPT</p>
+                    <p class="card-title2">We'll go deep in the core JS concepts that will help you to tame any JS framework. Design patterns, how and what to use to increase performances, productivity gain without generating memory leaks.</p>
+                  </div>
+                </div>
+          </div>
+          <div class="col s12 m6 l4">
+                <div class="card">
+                  <div class="card-content card-height-1">
+                    <p class="uppercase card-title1">ANGULARJS</p>
+                    <p class="card-title2">From zero to hero! After this week, there won't be any copy paste anymore (or at least you'll understand what you'll be copying). You'll be able to write fast, performant apps in Angular with your own controllers, directives and routing system.</p>
+                  </div>
+                </div>
+          </div> 
+          <div class="col s12 m6 l4">
+                <div class="card">
+                  <div class="card-content card-height-1">
+                    <p class="uppercase card-title1">TOOLS</p>
+                    <p class="card-title2">Tooling is probably what makes JS the best language. There are plethor of options that enables you to gain tremendous amount of time building your projects.</p>
+                  </div>
+                </div>
+          </div>
+          <div class="col s12 m6 l4">
+                <div class="card">
+                  <div class="card-content card-height-1">
+                    <p class="uppercase card-title1">MENTORSHIP</p>
+                    <p class="card-title2">Our mentors will come during the bootcamp to share with you in a very close groups their experience. You will able to get insight of the what is being an JavaScript engineer.</p>
+                  </div>
+                </div>
+          </div>
+          <div class="col s12 m6 l4">
+                <div class="card">
+                  <div class="card-content card-height-1">
+                    <p class="uppercase card-title1">PAIR PROGRAMMING</p>
+                    <p class="card-title2">2 screens and 2 keyboards connected to the same computer. This is where our program shines. You'll get to code on a projects with your peers. You'll learn how to lead a development process.</p>
+                  </div>
+                </div>
+          </div> 
+          <div class="col s12 m6 l4">
+                <div class="card">
+                  <div class="card-content card-height-1">
+                    <p class="uppercase card-title1">HACKING</p>
+                    <p class="card-title2">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback.</p>
+                  </div>
+                </div>
+          </div>
+        </div>   
+        <!-- <div class="row">
+          <div class="col s12 m6 l4 card white">
+            <div class="card-content">
+             <p class="uppercase bold-4">JAVASCRIPT</p>
+             <p>This has to be filled by davy. It has to summarize the curricuum of JS + Angular. What they'll be doing. E.g. build you own directive, design pattern, controllers...</p>
+            </div>
+          </div>
+          <div class="col s12 m6 l4 card white">
+             <p class="uppercase bold-4">ANGULARJS</p>
+             <p>This has to be filled by davy. It has to summarize the curricuum of JS + Angular. What they'll be doing. E.g. build you own directive, design pattern, controllers...</p>
+          </div>
+          <div class="col s12 m6 l4 card white">
+             <p class="uppercase bold-4">TOOLS</p>
+             <p>This has to be filled by davy. It has to summarize the curricuum of JS + Angular. What they'll be doing. E.g. build you own directive, design pattern, controllers...</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12 m6 l4 card white">
+             <p class="uppercase bold-4">MENTORSHIP</p>
+             <p>Our mentors will come during the bootcamp to share with you in a very close groups their experience. You will able to get insight of the what is being an JavaScript engineer.</p>
+          </div>
+          <div class="col s12 m6 l4 card white">
+             <p class="uppercase bold-4">PAIR PROGRAMMING</p>
+             <p>Our mentors will come during the bootcamp to share with you in a very close groups their experience. You will able to get insight of the what is being an JavaScript engineer.</p>
+          </div>
+          <div class="col s12 m6 l4 card white">
+             <p class="uppercase bold-4">HACKING</p>
+             <p>Our mentors will come during the bootcamp to share with you in a very close groups their experience. You will able to get insight of the what is being an JavaScript engineer.</p>
+          </div>
+        </div>
+      </div> -->
+  </section>
 
+  <section class="philos-teal-bg hide-on-small-only">
+    <div class="container">
+      <div class="section">
 
-  <!-- <footer class="page-footer orange">
+        <div id="daystructure"class="row margin-top-medium-negative raised-1"> <!-- HIDDEN SMALL -->
+          <div class="col s12 m12">
+            <div class="card">              
+              <div class="card-content">
+                <p class="card-title padding-bottom-small">A day in our Lab</p>
+                  <div class="row">
+                    <div class="col s12">
+                      <p><strong>Breakfast</strong> - Food will be provided. It will be the occasion to know each other better, talk about what we learned the day before, or just talk about anything you want actually.</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col s12">
+                      <p><strong>Live coding</strong> - We will introduce the theoretical concepts that you will need to work on your projects. These will be explained with live examples where interactions with bootcampers is more than welcomed.</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col s12">
+                      <p><strong>Pair programming</strong> - You will work on the same project in pairs. You will be working on the same screen, encouraging you to truly work in team and take the lead on the development process when needed.</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col s12">
+                      <p><strong>Lunch</strong> - There are plenty of place around the Lab where you can get food. Food won't be provided by Philos.</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col s12">
+                      <p><strong>Code</strong> - As in the morning session, we'll go through documentations and code examples for you to acquire the necessary background to work on your projects.</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col s12">
+                      <p><strong>Hacking & mentorship</strong> - You will work further on your projects and benefit from the experience for experienced JavaScript engineers to help you with that.</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col s12">
+                      <p><strong>Dinner & support (bonus)</strong> - This part is for those you are willing to get personalized support on their projects or who want to dig deeper in the material.</p>
+                    </div>
+                  </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+       </div> 
+     </div>   <!-- CONTAINER -->
+  </section>
+
+  <section class="hide-on-med-and-up">
+    <div class="container">
+      <div class="section">
+
+        <div id="daystructure"class="row"> <!-- HIDDEN SMALL -->
+          <div class="col s12 m12">
+                <h4 class="padding-bottom-small">A day in our Lab</h4>
+                  <div class="row">
+                    <div class="col s12">
+                      <p><strong>Breakfast</strong> - Food will be provided. It will be the occasion to know each other better, talk about what we learned the day before, or just talk about anything you want actually.</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col s12">
+                      <p><strong>Live coding</strong> - We will introduce the theoretical concepts that you will need to work on your projects. These will be explained with live examples where interactions with bootcampers is more than welcomed.</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col s12">
+                      <p><strong>Pair programming</strong> - You will work on the same project in pairs. You will be working on the same screen, encouraging you to truly work in team and take the lead on the development process when needed.</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col s12">
+                      <p><strong>Lunch</strong> - There are plenty of place around the Lab where you can get food. Food won't be provided by Philos.</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col s12">
+                      <p><strong>Code</strong> - As in the morning session, we'll go through documentations and code examples for you to acquire the necessary background to work on your projects.</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col s12">
+                      <p><strong>Hacking & mentorship</strong> - You will work further on your projects and benefit from the experience for experienced JavaScript engineers to help you with that.</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col s12">
+                      <p><strong>Dinner & support (bonus)</strong> - This part is for those you are willing to get personalized support on their projects or who want to dig deeper in the material.</p>
+                    </div>
+                  </div>
+
+              </div>
+            </div>
+          </div>
+        </div> <!-- CONTAINER -->
+
+  </section>
+
+  <section class="grey lighten-4 padding-top-medium">
     <div class="container">
       <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Company Bio</h5>
-          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
-
-
+        <div class="col s12">
+          <h4>Tuition</h4>
         </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Settings</h5>
+      </div>
+      <div class="row">
+        <div class="col s12 l6 offset-1">
+           <p>Our intensive week has been crafted with careful planning based on our experience working in tech companies and on thousands of hours experimenting and building products with bleeding edge technologies. 
+              We work with small cohort to give all the necessary support and truly engage with the participants. We know what it takes from a professional, personal and mental level to be at the top.</p>
+           <p>Your hours spent at Philos will be hands-on, neuron-intensive, high quality hours. You will be immersed in an environment of passionate developers and mentors with whom you will get to hack and get inspired from to truly experience and understand the technologies you will be working with.</p>  
+        </div>
+         <div class="col s12 l5">
+         <p class="text-normal-plus uppercase center bold-4">1-week bootcamp's price</p>
+          <h2 class="philos-teal center padding-top-small">1790€</h2>
+          <p class="text-normal-minus philos-teal center">excluding 21% VAT</p>
+        </div>
+      </div>
+      <div class="row no-margin-bottom padding-bottom-medium">
+        <div class="col s12 center">
+          <p class="text-normal-plus center">
+              <a href="#"><span class="btn">APPLY NOW</span></a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <footer class="page-footer blue-grey darken-3">
+    <div class="container">
+      <div class="row white-text">
+        <div class="col s12 m6 l4">
+            <ul>
+              <li class="bold-4">Philos is a JavaScript Lab. We are on a mission to get you on the bleeding edge.</li>
+              <br/>
+              <li>4 Rue des pères blancs</li>
+              <li>1040 Brussels</li>
+              <br/>
+              <li><a href="#!"><span class="philos-orange">Contact us <i class="fa fa-paper-plane-o"></i></span></a></li>
+            </ul>
+        </div>
+        <div class="col s6 m3 l2">
+          <p class="bold-4">Company</p>
           <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
+            <li><a class="white-text" href="#!">What we do</a></li>
+            <li><a class="white-text" href="#!">About Us</a></li>
+            <li><a class="white-text" href="#!">Team</a></li>
+            <li><a class="white-text" href="#!">Hiring</a></li>
           </ul>
         </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Connect</h5>
+        <div class="col s6 m3 l2">
+          <p class="bold-4">Connect</p>
           <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
+            <li><a class="white-text" href="#!"><i class="fa fa-medium"></i> Blog</a></li>
+            <li><a class="white-text" href="#!"><i class="fa fa-facebook-official"></i> Philos.io</a></li>
+            <li><a class="white-text" href="#!"><i class="fa fa-twitter"></i> @philos_io</a></li>
+            <li><a class="white-text" href="#!"><i class="fa fa-slideshare"></i> Philos.io</a></li>
+          </ul>
+        </div>
+        <div class="col s12 m12 hide-on-large-only"> <!-- HIDDEN LARGE -->
+        <hr >
+        </div>
+        <div class="col s12 m12 l4 center-on-med-and-down">
+          <p class="bold-4">Stay informed</p>
+          <ul>
+            <li>Get updates on the events, ideas and lessons learned from Philos</li>
+            <li>
+                <form class="col s8 offset-s2 m8 offset-m2 hide-on-large-only"> <!-- HIDDEN LARGE -->
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input id="email" type="email" class="validate">
+                      <label class="white-text" for="email" data-error="wrong" data-success="right" >Email</label>
+                      <input class="btn width-100" id="submit" type="submit" value="Stay Informed">
+                    </div>
+                  </div>
+                </form>
+                <form class="col l12 hide-on-med-and-down"> <!-- HIDDEN MED + SMALL -->
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input id="email" type="email" class="validate">
+                      <label class="white-text" for="email" data-error="wrong" data-success="right" >Email</label>
+                      <input class="btn width-100" id="submit" type="submit" value="Stay Informed">
+                    </div>
+                  </div>
+                </form>
+            </li>
           </ul>
         </div>
       </div>
     </div>
-    <div class="footer-copyright">
+      <div class="footer-copyright">
       <div class="container">
-      Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+        <div class="row hide-on-small-only"> <!-- HIDDEN SMALL -->
+          <div class="col m6">
+            <span class="left">© Philos.io 2015</span>          
+          </div>
+          <div class="col m6 right">
+            <span class="right">Crafted in Belgium with <span class="unicode">&#9829;</span> and <span class="unicode">&#127851;</span></span>
+          </div>
+        </div>
+        <div class="row hide-on-med-and-up"> <!-- HIDDEN MED + LARGE -->
+          <div class="col s12 text-normal-minus">
+            <span>© Philos.io 2015 -</span> 
+            <span>Crafted in Belgium with <span class="unicode">&#9829;</span> and <span class="unicode">&#127851;</span></span>
+          </div>
+        </div>
       </div>
+
     </div>
-  </footer> -->
+  </footer>
 
 
   <!--  Scripts-->

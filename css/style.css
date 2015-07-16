@@ -184,7 +184,9 @@ MARGIN, PADDING, Z-INDEX
 	z-index:4;
 }
 
-
+.border-bottom-card{
+	border-bottom: 1px solid rgba(160, 160, 160, 0.2);
+}
 /* ======================
 POSTIONS
    ======================*/
@@ -329,6 +331,15 @@ HEADER
 /*	  background-position-x: 30%;
   background-position-y: 10%;*/
 }
+
+.bg-photo-1{
+	background-image: url(../img/impulse-blackened-2.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+/*	  background-position-x: 30%;
+  background-position-y: 10%;*/
+}
+
 .active{
 	border-bottom: solid 2px white;
 }
@@ -380,6 +391,13 @@ FLEX
 	background-image: url(../img/event/react2.jpg);
     background-size: cover;
     height: 25rem;
+    box-sizing: border-box;
+}
+
+.photo-left-left-1{
+	background-image: url(../img/event/react2.jpg);
+    background-size: cover;
+    height: 12.5rem;
     box-sizing: border-box;
 }
 
@@ -488,6 +506,7 @@ html [flex] {
 /* ======================
 WIDTH
    ======================*/
+
 .width-70{
 	width: 70%;
 }
@@ -504,11 +523,15 @@ HEIGHT
 	height: 11rem;
 }
 
-  .card-title1{
+.card-height-1{
+	height: 15rem;
+}
+
+.card-title1{
   	min-height: 3rem;
   }
 
-  .card-title2{
+.card-title2{
   	min-height: 3rem;
   }
 
@@ -532,6 +555,9 @@ footer.page-footer {
 	min-height: 12rem;
 }
 
+.head-height{
+	min-height: 30rem;
+}
 /* ======================
 BUTTON
    ======================*/
@@ -599,7 +625,7 @@ ABOUT PAGE
 
 
 .bg-about-1{
-	background-image: url(../img/Shooting-L7.jpg);
+	background-image: url(../img/impulse6.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -614,4 +640,11 @@ ABOUT PAGE
 
 .height-title{
 	height: 5rem;
+}
+
+/* ======================
+CARD
+   ======================*/
+.card .card-action a {
+      color:  #FF4C27;
 }
