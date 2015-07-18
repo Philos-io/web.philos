@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<!-- saved from url=(0023)http://localhost:3000/? -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+  <title>Philos | Stay Ahead</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="./Philos _ Stay Ahead_files/materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
+  <link href="./Philos _ Stay Ahead_files/style.css" type="text/css" rel="stylesheet" media="screen,projection">
+  <!-- FONT AWESOME  -->
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="">
+  <link rel="icon" type="image/png" href="http://localhost:3000/img/logo/philos-no-bg-32x32.png">
+<style type="text/css"></style><style type="text/css">#mc_embed_signup input.mce_inline_error { border-color:#6B0505; } #mc_embed_signup div.mce_inline_error { margin: 0 0 1em 0; padding: 5px 10px; background-color:#6B0505; font-weight: bold; z-index: 1; color:#fff; }</style><script>(function bootstrap(window) {
+
+      if (!Array.prototype.find) {
+        Array.prototype.find = function(predicate) {
+          if (this == null) {
+            throw new TypeError('Array.prototype.find called on null or undefined');
+          }
+          if (typeof predicate !== 'function') {
+            throw new TypeError('predicate must be a function');
+          }
+          var list = Object(this);
+          var length = list.length >>> 0;
+          var thisArg = arguments[1];
+          var value;
+
+          for (var i = 0; i < length; i++) {
+            value = list[i];
+            if (predicate.call(thisArg, value, i, list)) {
+              return value;
+            }
+          }
+          return undefined;
+        };
+      }
+
+      function disablePlugin(reason) {
+        console.log(arguments);
+        console.log(reason);
+      }
+
+      var angular = window.angular;
+
+      // Helper to determine if the root 'ng' module has been loaded
+      // window.angular may be available if the app is bootstrapped asynchronously, but 'ng' might
+      // finish loading later.
+      function ngLoaded() {
+        if (!window.angular) {
+          return false;
+        }
+        try {
+          window.angular.module('ng');
+        } catch (e) {
+          return false;
+        }
+        return true;
+      }
+
+
+      if (!ngLoaded()) {
+        (function() {
+          var isAngularLoaded = function(ev) {
+
+            if (ev.srcElement.tagName === 'SCRIPT') {
+              var oldOnload = ev.srcElement.onload;
+              ev.srcElement.onload = function() {
+                if (ngLoaded()) {
+
+                  document.removeEventListener('DOMNodeInserted', isAngularLoaded);
+                  bootstrap(window);
+                }
+                if (oldOnload) {
+                  oldOnload.apply(this, arguments);
+                }
+              };
+            }
+          };
+          document.addEventListener('DOMNodeInserted', isAngularLoaded);
+        }());
+        return;
+      }
+
+      // do not patch twice
+      if (window.__ngDependencyGraph) {
+        return;
+      }
+
+
+      // helper to extract dependencies from function arguments
+      // not all versions of AngularJS expose annotate
+      var annotate; // = angular.injector().annotate;
+      if (!annotate) {
+        annotate = (function() {
+
+          var FN_ARGS = /^function\s*[^\(]*\(\s*([^\)]*)\)/m;
+          var FN_ARG_SPLIT = /,/;
+          var FN_ARG = /^\s*(_?)(.+?)\1\s*$/;
+          var STRIP_COMMENTS = /((\/\/.*$)|(\/\*[\s\S]*?\*\/))/mg;
+
+          // TODO: should I keep these assertions?
+          function assertArg(arg, name, reason) {
+            if (!arg) {
+              throw new Error("Argument '" + (name || '?') + "' is " + (reason || "required"));
+            }
+            return arg;
+          }
+
+          function assertArgFn(arg, name, acceptArrayAnnotation) {
+            if (acceptArrayAnnotation && angular.isArray(arg)) {
+              arg = arg[arg.length - 1];
+            }
+
+            assertArg(angular.isFunction(arg), name, 'not a function, got ' +
+              (arg && typeof arg === 'object' ? arg.constructor.name || 'Object' : typeof arg));
+            return arg;
+          }
+
+          return function(fn) {
+            var $inject,
+              fnText,
+              argDecl,
+              last;
+
+            if (typeof fn === 'function') {
+              if (!($inject = fn.$inject)) {
+                $inject = [];
+                fnText = fn.toString().replace(STRIP_COMMENTS, '');
+                argDecl = fnText.match(FN_ARGS);
+                argDecl[1].split(FN_ARG_SPLIT).forEach(function(arg) {
+                  arg.replace(FN_ARG, function(all, underscore, name) {
+                    $inject.push(name);
+                  });
+                });
+                fn.$inject = $inject;
+              }
+            } else if (angular.isArray(fn)) {
+              last = fn.length - 1;
+              assertArgFn(fn[last], 'fn');
+              $inject = fn.slice(0, last);
+            } else {
+              assertArgFn(fn, 'fn', true);
+            }
+            return $inject;
+          };
+        }());
+      }
+
+      window.__ngDependencyGraph = {
+        getMetadata: function() {
+          return metadata;
+        }
+      };
+
+      var metadata = {
+        angularVersion: angular.version,
+        apps: [],
+        modules: [],
+        host: window.location.host
+      };
+
+      var appElms = document.querySelectorAll('[ng-app]');
+      if (appElms.length > 0) {
+        angular.forEach(appElms,
+          function(elm) {
+            var appName = elm.getAttribute('ng-app');
+            if (metadata.apps.indexOf(appName) === -1) {
+              metadata.apps.push(appName);
+              createModule(appName);
+            }
+          });
+      } else {
+        metadata.apps.push('app');
+        createModule('app');
+      }
+
+      function createModule(name) {
+        var exist = metadata.modules.find(function(mod) {
+          return mod.name === name;
+        });
+
+        if (exist || name === undefined) {
+          return;
+        }
+
+        var module = angular.module(name);
+
+        var moduleData = {
+          name: name,
+          deps: module.requires,
+          components: []
+        };
+
+        processModule(moduleData);
+        metadata.modules.push(moduleData);
+
+        angular.forEach(module.requires, function(mod) {
+          createModule(mod);
+        });
+
+      }
+
+      function addDeps(moduleData, name, depsSrc, type) {
+        if (typeof depsSrc === 'function') {
+          moduleData.components.push({
+            name: name,
+            deps: annotate(depsSrc),
+            type: type
+          });
+          // Array or empty
+        } else if (Array.isArray(depsSrc)) {
+          var deps = depsSrc.slice();
+          deps.pop();
+          moduleData.components.push({
+            name: name,
+            deps: deps,
+            type: type
+          });
+        } else {
+          moduleData.components.push({
+            name: name,
+            type: type
+          });
+        }
+      }
+
+
+      function processModule(moduleData) {
+        var moduleName = moduleData.name;
+        var module = angular.module(moduleName);
+
+        // Old versions of AngularJS
+        var invokeQueue = module._invokeQueue || module.invokeQueue;
+
+        angular.forEach(invokeQueue, function(item) {
+          var compArgs = item[2];
+          switch (item[0]) {
+            case '$provide':
+              switch (item[1]) {
+                case 'value':
+                case 'constant':
+                  addDeps(moduleData, compArgs[0], compArgs[1], 'value');
+                  break;
+
+                default:
+                  addDeps(moduleData, compArgs[0], compArgs[1], 'service');
+
+                  break;
+              }
+
+              break;
+
+            case '$filterProvider':
+              addDeps(moduleData, compArgs[0], compArgs[1], 'filter');
+              break;
+            case '$animateProvider':
+              addDeps(moduleData, compArgs[0], compArgs[1], 'animation');
+              break;
+            case '$controllerProvider':
+              addDeps(moduleData, compArgs[0], compArgs[1], 'controller');
+              break;
+            case '$compileProvider':
+              if (compArgs[1].constructor === Object) {
+                angular.forEach(compArgs[1], function(key, value) {
+                  addDeps(moduleData, key, value, 'directive');
+                });
+              }
+
+              addDeps(moduleData, compArgs[0], compArgs[1], 'directive');
+              break;
+            case '$injector':
+              // invoke, ignore
+              break;
+            default:
+              disablePlugin('unknown dependency type', item[0]);
+              break;
+          }
+
+        });
+
+      }
+    }(window))</script></head>
+<body style="zoom: 1;">
+<header class="bg-photo head-height">
+    <nav class="transparent z-depth-0" role="navigation">
+      <div class="nav-wrapper">
+        <a id="logo-container" href="http://localhost:3000/" class="brand-logo hide-on-med-and-down"><img class="responsive-img border-top-vsmall padding-left-vsmall" src="./Philos _ Stay Ahead_files/philos_logo-m.png"></a> <!-- HIDDEN MED + SMALL -->
+        <ul class="right hide-on-med-and-down">       <!-- HIDDEN MED + SMALL -->
+          <li><a class="uppercase" href="http://localhost:3000/program.html">PROGRAM</a></li>
+          <li><a class="uppercase" href="http://localhost:3000/events.html">EVENTS</a></li>
+          <li><a class="uppercase" href="http://localhost:3000/about.html">ABOUT</a></li>
+          <li><a class="uppercase" href="http://localhost:3000/faq.html">FAQ</a></li>
+          <li><a href="https://admission.philos.io/" class="btn margin-right-vsmall uppercase">APPLY NOW</a></li>
+        </ul>
+
+        <ul id="nav-mobile" class="side-nav" style="left: -250px;">
+          <li><a class="uppercase" href="http://localhost:3000/">HOME</a></li>
+          <li><a class="uppercase" href="http://localhost:3000/program.html">PROGRAM</a></li>
+          <li><a class="uppercase" href="http://localhost:3000/events.html">EVENTS</a></li>
+          <li><a class="uppercase" href="http://localhost:3000/about.html">ABOUT</a></li>
+          <li><a class="uppercase" href="http://localhost:3000/faq.html">FAQ</a></li>
+          <li><a class="uppercase" href="http://localhost:3000/faq.html">FAQ</a></li>
+        </ul>
+        <div class="top-nav hide-on-large-only hide-on-small-only"> <!-- HIDDEN SMALL -->
+          <div class="top border-top-vsmall">
+            <a href="http://localhost:3000/" data-activates="nav-mobile" class="brand-logo"><img class="responsive-img" src="./Philos _ Stay Ahead_files/philos_logo-s.png"></a>
+            <a href="http://localhost:3000/" data-activates="nav-mobile" class="button-collapse margin-left-vsmall"><i class="fa fa-bars fa-lg"></i></a>
+          </div>
+          <div class="mid-top border-top-vsmall">
+            <a href="https://admission.philos.io/" class="btn right margin-right-vsmall ">APPLY NOW</a>
+          </div>
+        </div>
+        <div class="top-nav hide-on-med-and-up"> <!-- HIDDEN MED + LARGE -->
+          <div class="row no-margin-bottom">
+            <div class="top border-top-vsmall col s12">
+              <a href="http://localhost:3000/" data-activates="nav-mobile" class="brand-logo"><img class="responsive-img" src="./Philos _ Stay Ahead_files/philos_logo-s.png"></a>
+              <a href="http://localhost:3000/" data-activates="nav-mobile" class="button-collapse margin-left-vsmall"><i class="fa fa-bars fa-lg"></i></a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="mid-top col s12">
+              <a href="https://admission.philos.io/" class="btn width-100 margin-right-vsmall ">APPLY NOW</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center white-text padding-top-medium">Level Up your JavaScript skills</h1>
+    </div>
+  </div>
+</header>
+
+<div class="hide-on-med-and-up white padding-top-vsmall padding-bottom-vsmall"> <!-- HIDDEN MED + UP -->
+  <div class="row">
+    <div class="col s12">
+        <div class="text-normal-plus">
+          <p>Philos is a JavaScript Lab. We are on a mission to get you on the bleeding edge. 
+              Learn how to unleash the full potential of JS technologies during our 1-week intensive bootcamp.
+          </p>
+        </div>
+        <div class="">
+          <a class="philos-orange uppercase" href="http://localhost:3000/program.html">SEE THE FULL WEEK PROGRAM</a>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="grey lighten-4">
+  <div class="container">
+    <div class="section">
+
+      <div class="row margin-top-medium-negative raised-1 hide-on-small-only"> <!-- HIDDEN SMALL -->
+        <div class="col s12 m12">
+          <div class="card">
+            <div class="card-content">
+              <p class="text-normal-plus">Philos is a JavaScript Lab. We are on a mission to get you on the bleeding edge. 
+              Learn how to unleash the full potential of JS technologies during our 1-week intensive bootcamp.</p>
+            </div>
+            <div class="card-action">
+              <a class="philos-orange uppercase" href="http://localhost:3000/program.html">SEE THE FULL WEEK PROGRAM</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="grey-text text-darken-3 margin-top-medium">Upcoming Workshops &amp; Events</h4>
+      </div>
+
+      <div class="row">
+         <!--   Card 1   -->
+          <a class="upcoming-event" href="http://www.meetup.com/javascriptlab/events/221485094/" target="_blank">
+            <div class="col s12 m6 l4">
+              <div class="card">
+                <div class="card-image">
+                  <img class="responsive-img" src="./Philos _ Stay Ahead_files/belgiumjs-black.png">
+                </div>
+                <div class="card-content card-height">
+                  <p class="grey-text text-darken-2 uppercase card-title1">ES6, TIPS &amp; TRICKS</p>
+                  <p class="grey-text text-lighten-1 card-title2">Tips to use the new version of JS smartly</p>
+                  <div class="align-middle padding-top-small text-normal-minus">
+                    <span class="grey-text text-lighten-1"><i class="fa fa-calendar"></i>&nbsp;July</span>
+                    <span class="right align-middle philos-teal uppercase">FREE</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <!--  Card 2   -->
+          <a class="upcoming-event" href="http://www.meetup.com/ReactJS-Belgium/" target="_blank">
+            <div class="col s12 m6 l4">
+              <div class="card">
+                <div class="card-image">
+                  <img class="responsive-img" src="./Philos _ Stay Ahead_files/belgium-react.png">
+                </div> 
+                <div class="card-content card-height">
+                  <p class="grey-text text-darken-2 uppercase card-title1">CAN REACT AND ANGULAR COEXIST</p>
+                  <p class="grey-text text-lighten-1 card-title2">Using react and Angular in the same project</p>
+                  <div class="align-middle padding-top-small text-normal-minus">
+                    <span class="grey-text text-lighten-1"><i class="fa fa-calendar"></i>&nbsp;July</span>
+                    <span class="right align-middle philos-teal uppercase">FREE</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>        
+
+          <!--  Card 3   -->
+          <a class="upcoming-event hide-on-med-only" href="http://localhost:3000/program.html"> <!-- HIDDEN MED -->
+            <div class="col s12 m6 l4">
+              <div class="card">
+                <div class="card-image">
+                  <img class="responsive-img" src="./Philos _ Stay Ahead_files/impulse-1.jpg">
+                </div>
+                <div class="card-content card-height">
+                  <p class="grey-text text-darken-2 uppercase card-title1">1 WEEK INTENSIVE BOOTCAMP</p>
+                  <p class="grey-text text-lighten-1 card-title2">Deep dive in JavaScript (ES6 included) and Angular</p>
+                  <div class="align-middle padding-top-small text-normal-minus">
+                    <span class="grey-text text-lighten-1"><i class="fa fa-calendar"></i>&nbsp;14th - 19th Sept.</span>
+                    <span class="right philos-teal uppercase">2390€</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+
+        </div> <!--  ROW   -->
+
+        <div class="row hide-on-large-only hide-on-small-only"> <!-- HIDDEN LARGE + SMALL -->
+
+          <a class="upcoming-event" href="http://localhost:3000/program.html">
+            <div class="col s12 m6 l4">
+              <div class="card">
+                <div class="card-image">
+                  <img class="responsive-img" src="./Philos _ Stay Ahead_files/impulse-1.jpg">
+                </div>
+                <div class="card-content card-height">
+                  <p class="grey-text text-darken-2 uppercase card-title1">1 WEEK INTENSIVE BOOTCAMP</p>
+                  <p class="grey-text text-lighten-1 card-title2">Deep dive in JavaScript (ES6 included) and Angular</p>
+                  <div class="align-middle padding-top-small text-normal-minus">
+                    <span class="grey-text text-lighten-1"><i class="fa fa-calendar"></i>&nbsp;14th - 19th Sept.</span>
+                    <span class="right philos-teal uppercase">2390€</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <div class="col m6 hide-on-large-only hide-on-small-only padding-top-medium"> <!-- HIDDEN LARGE + SMALL -->
+              <p class="text-normal-plus">We love to mingle with the tech community. Check out the full list of upcoming and past events!''
+              <br>
+              </p>
+              <p class="text-normal-plus  center">
+                <a href="http://localhost:3000/events.html"><span class="philos-orange uppercase">SEE ALL EVENTS</span></a>
+              </p>
+          </div>
+
+        </div> <!--  ROW   -->
+
+        <div class="row padding-bottom-medium">
+           <div class="col s12 center hide-on-med-only"> <!-- HIDDEN MED -->
+              <p class="text-normal-plus">We love to mingle with the tech community. Check out the full list of upcoming and past events!
+              <br>
+              <a href="http://localhost:3000/events.html"><span class="philos-orange uppercase">SEE ALL EVENTS</span></a>
+              </p>
+            </div>
+        </div>
+
+    </div> <!--  SECTION   -->
+  </div> <!--  CONTAINER   -->
+</div> <!--  GREY LIGHT   -->
+
+      <!--   TRUST   -->
+        <div class="philos-teal-bg">
+          <div class="row no-margin border-bottom-small border-top-vsmall">
+            <div class="col l2 m4 s6">
+                <a target="_blank">
+                    <img src="./Philos _ Stay Ahead_files/de-persgroep_w.png" class="responsive-img img-centered" alt="">
+                </a>
+            </div>
+            <div class="col l2 m4 s6">
+                <a target="_blank">
+                    <img src="./Philos _ Stay Ahead_files/volt_w.png" class="responsive-img img-centered" alt="">
+                </a>
+            </div>
+            <div class="col l2 m4 s6">
+                <a target="_blank">
+                    <img src="./Philos _ Stay Ahead_files/kbc_w.png" class="responsive-img img-centered" alt="">
+                </a>
+            </div>
+            <div class="col l2 m4 s6">
+                <a target="_blank">
+                    <img src="./Philos _ Stay Ahead_files/teksystems_w.png" class="responsive-img img-centered" alt="">
+                </a>
+            </div>
+            <div class="col l2 m4 s6">
+                <a target="_blank">
+                    <img src="./Philos _ Stay Ahead_files/famous_w.png" class="responsive-img img-centered" alt="">
+                </a>
+            </div>
+            <div class="col l2 m4 s6">
+                <a target="_blank">
+                    <img src="./Philos _ Stay Ahead_files/wemanity_w.png" class="responsive-img img-centered" alt="">
+                </a>
+            </div>
+        </div>
+      </div>
+
+        <div class="row no-margin">
+
+              <div class="col s12 m6 l4 photo-right"> 
+                  <div class="left">
+                  <!-- HIDDEN MED + SMALL -->
+                        <p class="padding-top-small testimonial-height hide-on-med-and-down">"A passionate team and a high value training. Philos' workshop was amazing. It didn't only gave me the tools I needed to build my Angular project, it gave me a deep understanding of the framework and the JS concepts related to it.
+                        </p>
+                  <!-- HIDDEN LARGE -->
+                        <p class="padding-top-small hide-on-large-only">"A passionate team and a high value training. Philos' workshop was amazing. It didn't only gave me the tools I needed to build my Angular project, it gave me a deep understanding of the framework and the JS concepts related to it.
+                        </p>
+                  </div>
+                  <hr class="small-line">
+                  <div class="row">
+                        <div class="col s8">                   
+                            <p class="padding-top-small">Juan S. <br>Web Developer at <a href="https://assis.to/" target="_blank" class="philos-teal">Assisto</a></p>
+                        </div>
+                        <div class="col s4 center align-middle">
+                          <img src="./Philos _ Stay Ahead_files/photo-juan.jpg" alt="" class="circle responsive-img right">
+                        </div>
+                  </div>
+              </div>
+              <div class="col l4 photo-left-left hide-on-med-and-down">    <!-- HIDDEN MED + DOWN -->
+              </div>
+              <div class="col s12 m6 l4 photo-left-bottom"></div>            
+              <div class="col s12 m6 l4 photo-left-top"></div>
+        </div>
+        
+
+  <section class=" grey lighten-4"> 
+
+    <div class="container hide-on-small-only"> <!-- HIDDEN SMALL -->
+      <div class="row raised-1">
+        <div class="col m12 margin-top-medium-negative">
+          <div class="card">
+            <div class="card-content">
+              <p>
+              Our mission is to make you a wizard at the everlasting fundamental concepts that you will use throughout your career. We want you to be more than "just a coder”, we want to you to become a visionary software engineer who’s always one step ahead.</p>
+            </div>
+            <div class="card-action">
+              <a class="philos-orange" href="http://localhost:3000/program.html">APPLY FOR THE NEXT SESSION</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hide-on-med-and-up white padding-top-vsmall padding-bottom-vsmall "> <!-- HIDDEN MED + UP -->
+      <div class="row">
+        <div class="col s12">
+            <div class="text-normal-plus">
+              <p>We love to mingle with the tech community. Check out the full list of upcoming and past events!</p>
+            </div>
+            <div class="">
+              <a class="philos-orange" href="http://localhost:3000/program.html">APPLY FOR THE NEXT SESSION</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    <div class="container grey lighten-4">
+      <div class="row vertical-container margin-top-medium">
+        <div class="col s12">
+          <h4 class="grey-text text-darken-3 left">Why Philos?</h4>          
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row margin-top-small">
+        <div class="col s12 m6">
+          <div>
+              <p class="left no-margin-bottom text-normal-plus bold-4">State of the art curriculum</p>
+          </div>
+          <div>
+              <p class="left grey-text text-darken-3">
+                   We focus on bleeding edge technologies that will stay for years. We saw the potential of JavaScript years ago, we were right. JavaScript has gone <a href="http://www.forbes.com/sites/quora/2014/07/14/what-is-the-most-valuable-programming-language-to-know-for-the-future-and-why/">big</a> and is growing bigger every day/it is even becoming <a href="http://githut.info/">the norm these days</a>. From IoT to real-time interactive apps ; from back end to front end - <a href="http://localhost:3000/?#">JavaScript covers it all</a>. Don't miss the bus.
+              </p>
+          </div>
+        </div>
+        <div class="col s12 m6">
+          <div>
+            <p class="left no-margin-bottom text-normal-plus bold-4">Amazing instructors</p>
+          </div>
+          <div>
+            <p class="left grey-text text-darken-3">
+              Our instructors are software engineers and passionate developers who love to teach and who are incredibly good at it. They have embraced JavaScript years ago and have been lead engineers in top companies as well as in startups. They will provide you with what you need to raise your skills to the next level.                     
+            </p>
+          </div>
+        </div>
+      </div><!-- ROW -->
+      <div class="row">
+        <div class="col s12 m6">
+          <div>
+            <p class="left no-margin-bottom text-normal-plus bold-4">Hands-on - Project based</p>
+          </div>
+          <div>
+              <p class="left grey-text text-darken-3">
+                   We are strong believers in the <strong>learning by doing</strong>. This is why our workshops are mostly hands-on and project based. You will get to work in pairs, experiment and hack the latest technologies to truly experience and understand the language you will be working on. 
+              </p>
+          </div>
+        </div>
+        <div class="col s12 m6">
+          <div>
+              <p class="left no-margin-bottom text-normal-plus bold-4">High quality matters</p>
+          </div>
+          <div>
+            <p class="left grey-text text-darken-3">
+              The hours spent at Philos are neuron-intensive, high quality hours. We always aim for small teams to foster communication between participants and encourage interactions with instructors. We've built an ultra pertinent curriculum thanks to our amazing community and the invaluable feedback from former participants.          
+            </p>
+          </div>
+          </div>
+        </div><!-- ROW -->
+        <div class="row">
+          <div class="col s12 m6">
+            <div>
+                 <p class="left no-margin-bottom text-normal-plus bold-4">Immersive environment</p>
+            </div>
+            <div>
+                <p class="left grey-text text-darken-3">
+                     What we offer you at Philos is an immersive environment with passionate developers like you who have a thirst for knowledge. With our events, we encourage our former students and the tech community to meet, talk and dream about tech. Coming at Philos will be like going to Rome to learn Italian, a fully immersive experience. 
+                </p>
+            </div>
+          </div>
+          <div class="col s12 m6">
+            <div>
+                 <p class="left no-margin-bottom text-normal-plus bold-4">Top students &amp; great community</p>
+            </div>
+            <div>
+                <p class="left grey-text text-darken-3">
+                     Philo's workshops are intense. Students attending them are passionate and dedicated to improving their coding skills. Even after the course's normal hours, most of our students find themselves staying much longer to talk about the future of technology or the last feature they've added to their project.    
+                </p>
+            </div>
+          </div>
+        </div><!-- ROW -->
+    </div><!-- CONTAINER -->
+
+    <div class="container margin-top-small padding-bottom-medium">
+      <div class="col s12">
+          <p class="text-normal-plus center">Make the choice that will put you on the fast track. Stay ahead of the game. 
+          <br>
+          </p>
+          <p class="text-normal-plus  center">
+            <a href="https://admission.philos.io/"><span class="philos-orange uppercase">APPLY FOR THE BOOTCAMP</span></a>
+          </p>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="page-footer blue-grey darken-3">
+      <div class="container">
+        <div class="row white-text">
+          <div class="col s12 m6 l4">
+              <ul>
+                <li class="bold-4">Philos is a JavaScript Lab. We are on a mission to get you on the bleeding edge.</li>
+                <br>
+                <li>4 Rue des pères blancs</li>
+                <li>1040 Brussels</li>
+                <br>
+                <li><a href="http://localhost:3000/contact.html"><span class="philos-orange">Contact us <i class="fa fa-paper-plane-o"></i></span></a></li>
+              </ul>
+          </div>
+          <div class="col s6 m3 l2">
+            <p class="bold-4">Company</p>
+            <ul>
+              <li><a class="white-text" href="http://localhost:3000/program.html">Program</a></li>
+              <li><a class="white-text" href="http://localhost:3000/events.html">Events</a></li>
+              <li><a class="white-text" href="http://localhost:3000/about.html">About</a></li>
+              <li><a class="white-text" href="http://localhost:3000/faq.html">FAQ</a></li>
+              <li><a class="white-text" href="https://admission.philos.io/">Apply</a></li>
+            </ul>
+          </div>
+          <div class="col s6 m3 l2">
+            <p class="bold-4">Connect</p>
+            <ul>
+              <li><a class="white-text" href="https://medium.com/@philos.io"><i class="fa fa-medium"></i> Blog</a></li>
+              <li><a class="white-text" href="https://www.facebook.com/philos.io"><i class="fa fa-facebook-official"></i> Philos.io</a></li>
+              <li><a class="white-text" href="https://twitter.com/philos_io"><i class="fa fa-twitter"></i> @philos_io</a></li>
+              <li><a class="white-text" href="http://www.slideshare.net/max-philos/"><i class="fa fa-slideshare"></i> Philos.io</a></li>
+            </ul>
+          </div>
+          <div class="col s12 m12 hide-on-large-only"> <!-- HIDDEN LARGE -->
+          <hr>
+          </div>
+          <div class="col s12 m12 l4 center-on-med-and-down">
+            <p class="bold-4">Stay informed</p>
+            <ul>
+              <li>Get updates on the events, ideas and lessons learned from Philos</li>
+              <li>
+                  <form class="col s8 offset-s2 m8 offset-m2 hide-on-large-only"> <!-- HIDDEN LARGE -->
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <input id="email" type="email" class="validate">
+                        <label class="white-text" for="email" data-error="wrong" data-success="right">Email</label>
+                        <input class="btn width-100" id="btnSuscribeSmall" type="submit" value="Stay Informed">
+                      </div>
+                    </div>
+                  </form>
+
+                  <div id="mc_embed_signup">
+                    <form action="http://philos.us10.list-manage.com/subscribe/post?u=2d1281127eb89708bad0ebec3&id=af7d02db95" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="novalidate" _lpchecked="1">
+                        <div id="mc_embed_signup_scroll">
+                      
+                    
+                    <div class="input-field col s12">
+                      <input type="email" value="" name="EMAIL" class="required validate" id="mce-EMAIL" aria-required="true">
+                      <label for="mce-EMAIL" class="white-text active">Email</label>
+                    </div>
+                      <div id="mce-responses" class="clear">
+                        <div class="response" id="mce-error-response" style="display:none"></div>
+                        <div class="response" id="mce-success-response" style="display:none"></div>
+                      </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                      <div style="position: absolute; left: -5000px;"><input type="text" name="b_2d1281127eb89708bad0ebec3_af7d02db95" tabindex="-1" value=""></div>
+                      <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn width-100"></div>
+                      </div>
+                    </form>
+                  </div>
+                  
+              </li>
+            </ul>
+          </div>
+      </div>
+      </div>
+        <div class="footer-copyright">
+        <div class="container">
+          <div class="row hide-on-small-only"> <!-- HIDDEN SMALL -->
+            <div class="col m6">
+              <span class="left">© Philos.io 2015</span>          
+            </div>
+            <div class="col m6 right">
+              <span class="right">Crafted in Belgium with <span class="unicode">♥</span> and <span class="unicode">🍫</span></span>
+            </div>
+          </div>
+          <div class="row hide-on-med-and-up"> <!-- HIDDEN MED + LARGE -->
+            <div class="col s12 text-normal-minus">
+              <span>© Philos.io 2015 -</span> 
+              <span>Crafted in Belgium with <span class="unicode">♥</span> and <span class="unicode">🍫</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+  </footer>
+
+  <!--  Scripts-->
+  <script src="./Philos _ Stay Ahead_files/jquery-2.1.1.min.js"></script>
+  <script src="./Philos _ Stay Ahead_files/materialize.min.js"></script>
+<script type="text/javascript" src="./Philos _ Stay Ahead_files/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+<!--End mc_embed_signup-->
+  <script src="./Philos _ Stay Ahead_files/init.js"></script>
+
+  
+
+<div class="hiddendiv common"></div><div class="drag-target" style="left: 0px; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></div><div class="drag-target" style="left: 0px; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></div><script id="hiddenlpsubmitdiv" style="display: none;"></script><script>try{for(var lastpass_iter=0; lastpass_iter < document.forms.length; lastpass_iter++){ var lastpass_f = document.forms[lastpass_iter]; if(typeof(lastpass_f.lpsubmitorig2)=="undefined"){ lastpass_f.lpsubmitorig2 = lastpass_f.submit; if (typeof(lastpass_f.lpsubmitorig2)=='object'){ continue;}lastpass_f.submit = function(){ var form=this; var customEvent = document.createEvent("Event"); customEvent.initEvent("lpCustomEvent", true, true); var d = document.getElementById("hiddenlpsubmitdiv"); if (d) {for(var i = 0; i < document.forms.length; i++){ if(document.forms[i]==form){ if (typeof(d.innerText) != 'undefined') { d.innerText=i.toString(); } else { d.textContent=i.toString(); } } } d.dispatchEvent(customEvent); }form.lpsubmitorig2(); } } }}catch(e){}</script></body></html>
