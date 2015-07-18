@@ -1,0 +1,3 @@
+RewriteEngine On
+    RewriteCond %{HTTP_HOST} ^philos-bootcamp.surge.sh/program$
+    RewriteRule ^$ http://philos-bootcamp.surge.sh/program.html [L,R=301]
