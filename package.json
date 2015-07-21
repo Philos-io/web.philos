@@ -1,0 +1,30 @@
+{
+  "name": "web.philos.io",
+  "version": "1.0.0",
+  "description": "philos, angular, bootcamp, javascript",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Philos-io/web.philos.git"
+  },
+  "keywords": [
+    "JavaScript",
+    "Angular",
+    "Node",
+    "Bootcamp"
+  ],
+  "author": "max@philos.io, davy@philos.io",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Philos-io/web.philos/issues"
+  },
+  "homepage": "https://github.com/Philos-io/web.philos#readme",
+  "dependencies": {
+    "compression": "^1.5.1",
+    "express": "^4.13.1"
+  }
+}
