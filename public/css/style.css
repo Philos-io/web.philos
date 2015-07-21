@@ -226,6 +226,10 @@ FONT
     text-transform: uppercase;
 }
 
+.underline{
+    text-decoration: underline;
+}
+
 .text-normal-plus{
 	font-size: 1.2rem;
 }
@@ -648,3 +652,4 @@ CARD
 .card .card-action a {
       color:  #FF4C27;
 }
+
