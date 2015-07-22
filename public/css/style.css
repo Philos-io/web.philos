@@ -666,3 +666,11 @@ CARD
 	width: 500px;
 	height: auto;
 }
+
+/* ======================
+List
+   ======================*/
+
+.bullet{
+	list-style-type: circle;
+}
