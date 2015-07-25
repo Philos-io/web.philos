@@ -9,8 +9,6 @@ var port = process.env.PORT || 9000;
 app.use(compression());
 app.use(express.static(views));
 
-console.log(views);
-
 require('./routes/')(app);
 
 app.listen(port, function(){
