@@ -531,6 +531,10 @@ HEIGHT
 	height: 15rem;
 }
 
+.card-height-2{
+	height: 18rem;
+}
+
 .card-title1{
   	min-height: 3rem;
   }
