@@ -344,6 +344,14 @@ HEADER
   background-position-y: 10%;
 }
 
+.bg-photo-2{
+	background-image: url(../img/crack-the-code.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+ background-position-x: 40%;
+  background-position-y: 10%;
+}
+
 .active{
 	border-bottom: solid 2px white;
 }
