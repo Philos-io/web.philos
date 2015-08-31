@@ -352,6 +352,15 @@ HEADER
   background-position-y: 10%;
 }
 
+.bg-photo-3{
+	background-image: url(../img/crack-the-code-1.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+ background-position-x: 40%;
+  background-position-y: 10%;
+}
+
+
 .active{
 	border-bottom: solid 2px white;
 }
@@ -573,6 +582,10 @@ footer.page-footer {
 
 .head-height{
 	min-height: 30rem;
+}
+
+.head-height-2{
+	min-height: 34rem;
 }
 /* ======================
 BUTTON
