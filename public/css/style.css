@@ -385,9 +385,6 @@ UPCOMING EVENTS
 /* ======================
 TESTIMONIALS
    ======================*/
-.testimonial-height{
-	height: 10rem;
-}
 
 
 /* ======================
@@ -539,6 +536,10 @@ WIDTH
 /* ======================
 HEIGHT
    ======================*/
+
+.testimonial-height{
+	height: 10rem;
+}
 
 .card-height{
 	height: 11rem;
