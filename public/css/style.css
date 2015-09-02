@@ -234,6 +234,10 @@ FONT
 	font-size: 1.2rem;
 }
 
+.text-normal-plus-1{
+	font-size: 1.5rem;
+}
+
 .text-normal-minus{
 	font-size: 0.9rem;
 }
