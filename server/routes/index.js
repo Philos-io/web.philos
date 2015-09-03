@@ -29,7 +29,7 @@ module.exports = function(app){
 		res.sendFile(path.join(dirPath+'/faq.html'));
 	});
 
-	app.get('crack-the-code', function(req, res){
+	app.get('/crack-the-code', function(req, res){
 		res.sendFile(path.join(dirPath+'/crack-the-code.html'));
 	});
 }
