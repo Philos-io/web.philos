@@ -28,4 +28,8 @@ module.exports = function(app){
 	app.get('/faq', function(req, res){
 		res.sendFile(path.join(dirPath+'/faq.html'));
 	});
+
+	app.get('crack-the-code', function(req, res){
+		res.sendFile(path.join(dirPath+'/crack-the-code.html'));
+	});
 }
