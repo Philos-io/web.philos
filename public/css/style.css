@@ -234,6 +234,10 @@ FONT
 	font-size: 1.2rem;
 }
 
+.text-normal-plus-1{
+	font-size: 1.5rem;
+}
+
 .text-normal-minus{
 	font-size: 0.9rem;
 }
@@ -385,9 +389,6 @@ UPCOMING EVENTS
 /* ======================
 TESTIMONIALS
    ======================*/
-.testimonial-height{
-	height: 10rem;
-}
 
 
 /* ======================
@@ -539,6 +540,10 @@ WIDTH
 /* ======================
 HEIGHT
    ======================*/
+
+.testimonial-height{
+	height: 10rem;
+}
 
 .card-height{
 	height: 11rem;
