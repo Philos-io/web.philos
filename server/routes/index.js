@@ -5,6 +5,10 @@ var dirPath = path.join(__dirname, '../../public');
 
 module.exports = function(app){
 	
+	app.get('/contact.html', function(req, res){
+		req.redirect('/contact');
+	});
+
 	app.get('/contact', function(req, res){
 		res.sendFile(path.join(dirPath+'/contact.html'));
 	});
