@@ -364,6 +364,13 @@ HEADER
   background-position-y: 10%;
 }
 
+.bg-pattern{
+  background-attachment: fixed;
+  background-image: url(../img/pattern_image.png);
+  background-position: top center;
+  background-repeat: repeat;
+}
+
 
 .active{
 	border-bottom: solid 2px white;
@@ -423,9 +430,11 @@ FLEX
     box-sizing: border-box;
 }
 
-.photo-right{
-/*	background-color: teal;
-	/*height: 25rem;*/*/
+.photo-middle{
+	background-image: url(../img/event/angular-silver4.jpg);
+	background-size: cover;
+    height: 25rem;
+    box-sizing: border-box;
 }
 
 .aligner {
@@ -592,6 +601,7 @@ footer.page-footer {
 .head-height-2{
 	min-height: 34rem;
 }
+
 /* ======================
 BUTTON
    ======================*/
@@ -703,4 +713,13 @@ List
 
 .bullet{
 	list-style-type: circle;
+}
+
+/* ======================
+LOGO CONTAINER
+   ======================*/
+
+.logo-container img{
+	height: 7em;
+	width: auto;
 }
