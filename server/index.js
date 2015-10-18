@@ -1,20 +1,16 @@
-/**
- * Entry point of the app using Express
-**/
+var express = require('express'),
+	app = express(),
+	compression = require('compression'),
+	path = require('path');
 
-import express from 'express';
-import compression from 'compression';
-import path from 'path';
-import config from './config';
+var views = path.resolve(__dirname, '../public');
 
-let app = express();
-let views = path.resolve(path.join(__dirname, '..',  config.entry));
-let port = process.env.PORT || 9000;
-
+var port = process.env.PORT || 9000;
 app.use(compression());
 app.use(express.static(views));
+
 require('./routes/')(app);
 
-app.listen(port, () => {
+app.listen(port, function(){
 	console.log('app is running on port+ ', port);
 });
