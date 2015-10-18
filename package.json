@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon --exec babel-node --stage 0 server.js"
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -18,13 +18,13 @@
     "Bootcamp"
   ],
   "author": "max@philos.io, davy@philos.io",
-  "license": "MIT",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/Philos-io/web.philos/issues"
   },
   "homepage": "https://github.com/Philos-io/web.philos#readme",
   "dependencies": {
-    "compression": "^1.6.0",
-    "express": "^4.13.3"
+    "compression": "^1.5.1",
+    "express": "^4.13.1"
   }
 }
