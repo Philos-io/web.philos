@@ -7,7 +7,7 @@ class Partner extends Component{
     <div className="container">
     <div className="row padding-top-small">
     <div className="col s12">
-    <h4 className="grey-text text-darken-3 left">Choose a training. Get up to speed with the latest in JavaScript technologies.</h4>
+    <h4 className="grey-text text-darken-3 center">Choose a training. Get up to speed with the latest in JavaScript technologies.</h4>
     </div>
     </div>
     <div className="row padding-top-small">
