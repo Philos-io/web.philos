@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router';
 
 class Header extends Component{
   render(){
@@ -38,7 +39,7 @@ class Header extends Component{
     <h1 className="header center white-text padding-top-medium no-margin-bottom">Practical enterprise training for developers</h1>
       <h2 className="center white-text text-normal-plus-1 ">Level up your programming skills. Get mentoring and guidance on JavaScript technologies from industry experts</h2>
     <p className="text-normal-plus center padding-top-vsmall">
-    <a href="/training.html"><span className="btn uppercase">VIEW TRAINING</span></a>
+    <Link to='/products'><span className="btn uppercase">VIEW TRAINING</span></Link>
     </p>
     </div>
     </section>

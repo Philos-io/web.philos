@@ -25,7 +25,7 @@ class Footer extends Component{
     <li><a className="white-text" href="/faq">FAQ</a></li>
     <li><a className="white-text" href="/events">Community</a></li>
     <li><a className="white-text" href="/crack-the-code">Crack The Code</a></li>
-    <li><a className="white-text" href="https://admission.philos.io" className="btn margin-right-vsmall">Apply</a></li>
+    <li><a className="white-text btn margin-right-vsmall" href="https://admission.philos.io">Apply</a></li>
     </ul>
     </div>
     <div className="col s6 m3 l2">

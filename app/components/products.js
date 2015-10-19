@@ -5,7 +5,6 @@ import ParseReact from 'parse-react';
 
 let ParseComponent = ParseReact.Component(React);
 
-
 class Products extends ParseComponent{
   constructor(){
     super();
@@ -32,4 +31,11 @@ class Products extends ParseComponent{
 
 }
 
-export default Products;
+
+class Pro extends Component{
+  render(){
+    return <div>Inside product page</div>;
+  }
+}
+
+export default Pro;
