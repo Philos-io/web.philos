@@ -6,7 +6,7 @@ class Menu extends Component{
     return <header className="">
 		    <nav className="transparent z-depth-0" role="navigation">
 		      <div className="nav-wrapper nav-bg">
-		        <a id="logo-container" href="#" className="brand-logo hide-on-med-and-down"><img className="responsive-img border-top-vsmall padding-left-vsmall" src="img/logo/philos_logo-m.png"/></Link>
+		        <Link id="logo-container" href="#" className="brand-logo hide-on-med-and-down"><img className="responsive-img border-top-vsmall padding-left-vsmall" src="img/logo/philos_logo-m.png"/></Link>
 		        <ul className="right hide-on-med-and-down">
 		          <li className="active"><Link to="#">WHAT WE DO</Link></li>
 		          <li><Link to="#">ABOUT</Link></li>
