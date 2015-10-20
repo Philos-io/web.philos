@@ -9,16 +9,17 @@ import Partner from './components/partners';
 import ProductDetail from './components/productDetails';
 import NoMatch from './components/nomatch';
 import Products from './components/products';
+import Menu from './components/menu';
 
 class Philos extends Component{
   render(){
     return <div>
-    <Header/>
-    <Testimonials/>
-    <About/>
-    <Partner/>
-    <Footer/>
-    </div>;
+            <Header/>
+            <Testimonials/>
+            <About/>
+            <Partner/>
+            <Footer/>
+          </div>;
   }
 }
 
@@ -26,8 +27,10 @@ class Philos extends Component{
 class Canvas extends Component{
    render(){
      return <div>
-     {this.props.children}
-     </div>;
+              <Menu/>
+               {this.props.children}
+              <Footer/>
+            </div>;
    }
 }
 
@@ -35,6 +38,7 @@ render((<Router>
           <Route path="/" component={Canvas}>
             <Route path="home" component={Philos}/>
             <Route path="products" component={Products}/>
+            <Route path="products/:id" component={ProductDetail}/>
           </Route>
           <Route path="*" component={NoMatch}/>
        </Router>), document.getElementById('container'));
