@@ -6,24 +6,29 @@ class Menu extends Component{
     return <header className="">
 		    <nav className="transparent z-depth-0" role="navigation">
 		      <div className="nav-wrapper nav-bg">
-		        <Link id="logo-container" href="#" className="brand-logo hide-on-med-and-down"><img className="responsive-img border-top-vsmall padding-left-vsmall" src="img/logo/philos_logo-m.png"/></Link>
+		        <Link id="logo-container" to="/" className="brand-logo hide-on-med-and-down">
+              <img className="responsive-img border-top-vsmall padding-left-vsmall" src="img/logo/philos_logo-m.png"/>
+            </Link>
 		        <ul className="right hide-on-med-and-down">
-		          <li className="active"><Link to="#">WHAT WE DO</Link></li>
-		          <li><Link to="#">ABOUT</Link></li>
-		          <li><Link to="#">BLOG</Link></li>
-		          <li><Link to="#">TEAM</Link></li>
+		          <li><Link className="active" to="/workshops">TRAINING</Link></li>
+		          <li><Link to="/pricing">PRICING</Link></li>
+		          <li><Link to="/about">ABOUT</Link></li>
+		          <li><Link to="/blog.philos.io">BLOG</Link></li>
 		        </ul>
-
 		        <ul id="nav-mobile" className="side-nav">
-		          <li><Link to="#">WHAT WE DO</Link></li>
-		          <li><Link to="#">ABOUT</Link></li>
-		          <li><Link to="#">BLOG</Link></li>
-		          <li><Link to="#">TEAM</Link></li>
-		        </ul>
+              <li><Link className="activate" to="/workshops">TRAINING</Link></li>
+		          <li><Link to="/pricing">PRICING</Link></li>
+		          <li><Link to="/about">ABOUT</Link></li>
+		          <li><Link to="/blog.philos.io">BLOG</Link></li>
+            </ul>
 		        <div className="top-nav hide-on-large-only hide-on-small-only">
 		          <div className="top border-top-vsmall">
-		            <Link to="#" data-activates="nav-mobile" className="brand-logo"><img className="responsive-img" src="img/logo/philos_logo-s.png"/></Link>
-		            <Link to="#" data-activates="nav-mobile" className="button-collapse margin-left-vsmall"><i className="fa fa-bars fa-lg"></i></Link>
+		            <Link to="#" data-activates="nav-mobile" className="brand-logo">
+                  <img className="responsive-img" src="img/logo/philos_logo-s.png"/>
+                </Link>
+		            <Link to="#" data-activates="nav-mobile" className="button-collapse margin-left-vsmall">
+                 <i className="fa fa-bars fa-lg"></i>
+                </Link>
 		          </div>
 		          <div className="mid-top border-top-vsmall">
 		            <Link to="#" className="btn right margin-right-vsmall ">APPLY NOW</Link>
@@ -32,8 +37,12 @@ class Menu extends Component{
 		        <div className="top-nav hide-on-med-and-up">
             <div className="row no-margin-bottom">
 		            <div className="top border-top-vsmall col s12">
-		              <Link to="#" data-activates="nav-mobile" className="brand-logo"><img className="responsive-img" src="img/logo/philos_logo-s.png"/></Link>
-		              <Link to="#" data-activates="nav-mobile" className="button-collapse margin-left-vsmall"><i className="fa fa-bars fa-lg"></i></Link>
+		              <Link to="#" data-activates="nav-mobile" className="brand-logo">
+                   <img className="responsive-img" src="img/logo/philos_logo-s.png"/>
+                  </Link>
+		              <Link to="#" data-activates="nav-mobile" className="button-collapse margin-left-vsmall">
+                    <i className="fa fa-bars fa-lg"></i>
+                  </Link>
 		            </div>
 		          </div>
 		          <div className="row">
