@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Router, Route} from 'react-router';
+import {Router, Route, IndexRoute} from 'react-router';
 import {render} from 'react-dom';
 import Header from './components/header';
 import Footer from './components/footer';
@@ -15,30 +15,29 @@ class Philos extends Component{
   render(){
     return <div>
             <Header/>
-            <Testimonials/>
-            <About/>
-            <Partner/>
+              <Testimonials/>
+              <About/>
+              <Partner/>
             <Footer/>
           </div>;
   }
 }
 
-
 class Canvas extends Component{
    render(){
      return <div>
-              <Menu/>
+               <Menu/>
                {this.props.children}
-              <Footer/>
+               <Footer/>
             </div>;
    }
 }
 
 render((<Router>
-          <Route path="/" component={Canvas}>
-            <Route path="home" component={Philos}/>
-            <Route path="products" component={Products}/>
-            <Route path="products/:id" component={ProductDetail}/>
+          <Route path="/" component={Philos}/>
+          <Route path="/products" component={Canvas}>
+            <IndexRoute component={Products}/>
+            <Route path=":id" component={ProductDetail}/>
           </Route>
           <Route path="*" component={NoMatch}/>
        </Router>), document.getElementById('container'));
