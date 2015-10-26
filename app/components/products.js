@@ -51,7 +51,7 @@ class Pro extends Component{
         </div>
        </div>
       </Link>
-      <Link className="upcoming-event" to="/products/getting-up-and-running-with-angular">
+      <Link className="upcoming-event" to="/getting-up-and-running-with-angular">
         <div className="col s12 m6 l4">
          <div className="card">
           <div className="card-content card-height">
@@ -64,7 +64,7 @@ class Pro extends Component{
         </div>
        </div>
       </Link>
-      <Link className="upcoming-event" to="/products/getting-up-and-running-with-angular">
+      <Link className="upcoming-event" to="/getting-up-and-running-with-angular">
         <div className="col s12 m6 l4">
          <div className="card">
           <div className="card-content card-height">
@@ -77,7 +77,7 @@ class Pro extends Component{
         </div>
        </div>
       </Link>
-      <Link className="upcoming-event" to="/products/getting-up-and-running-with-angular">
+      <Link className="upcoming-event" to="/getting-up-and-running-with-angular">
         <div className="col s12 m6 l4">
          <div className="card">
           <div className="card-content card-height">
@@ -90,7 +90,7 @@ class Pro extends Component{
         </div>
        </div>
       </Link>
-      <Link className="upcoming-event" to="/products/getting-up-and-running-with-angular">
+      <Link className="upcoming-event" to="/getting-up-and-running-with-angular">
         <div className="col s12 m6 l4">
          <div className="card">
           <div className="card-content card-height">
@@ -103,7 +103,7 @@ class Pro extends Component{
         </div>
        </div>
       </Link>
-      <Link className="upcoming-event" to="/products/getting-up-and-running-with-angular">
+      <Link className="upcoming-event" to="/getting-up-and-running-with-angular">
         <div className="col s12 m6 l4">
          <div className="card">
           <div className="card-content card-height">
@@ -116,7 +116,7 @@ class Pro extends Component{
         </div>
        </div>
       </Link>
-      <Link className="upcoming-event" to="/products/getting-up-and-running-with-angular">
+      <Link className="upcoming-event" to="/getting-up-and-running-with-angular">
         <div className="col s12 m6 l4">
          <div className="card">
           <div className="card-content card-height">
@@ -129,7 +129,7 @@ class Pro extends Component{
         </div>
        </div>
       </Link>
-      <Link className="upcoming-event" to="/products/getting-up-and-running-with-angular">
+      <Link className="upcoming-event" to="/getting-up-and-running-with-angular">
         <div className="col s12 m6 l4">
          <div className="card">
           <div className="card-content card-height">
@@ -142,7 +142,7 @@ class Pro extends Component{
         </div>
        </div>
       </Link>
-      <Link className="upcoming-event" to="/products/getting-up-and-running-with-angular">
+      <Link className="upcoming-event" to="/getting-up-and-running-with-angular">
         <div className="col s12 m6 l4">
          <div className="card">
           <div className="card-content card-height">
@@ -155,7 +155,7 @@ class Pro extends Component{
         </div>
        </div>
       </Link>
-      <Link className="upcoming-event" to="/products/getting-up-and-running-with-angular">
+      <Link className="upcoming-event" to="/getting-up-and-running-with-angular">
         <div className="col s12 m6 l4">
          <div className="card">
           <div className="card-content card-height">
@@ -168,7 +168,7 @@ class Pro extends Component{
         </div>
        </div>
       </Link>
-      <Link className="upcoming-event" to="/products/getting-up-and-running-with-angular">
+      <Link className="upcoming-event" to="/getting-up-and-running-with-angular">
         <div className="col s12 m6 l4">
          <div className="card">
           <div className="card-content card-height">
@@ -181,7 +181,7 @@ class Pro extends Component{
         </div>
        </div>
       </Link>
-      <Link className="upcoming-event" to="/products/getting-up-and-running-with-angular">
+      <Link className="upcoming-event" to="/getting-up-and-running-with-angular">
         <div className="col s12 m6 l4">
          <div className="card">
           <div className="card-content card-height">
