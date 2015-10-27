@@ -51,6 +51,21 @@ class Pro extends Component{
         </div>
        </div>
       </Link>
+
+      <Link className="upcoming-event" to="/program">
+        <div className="col s12 m6 l4">
+         <div className="card">
+          <div className="card-content card-height">
+           <p className="grey-text text-darken-2 uppercase card-title1">JavaScript & Angular bootcamp for developers</p>
+           <p className="grey-text text-lighten-1 card-title2">6 days bootcamp</p>
+           <div className="align-middle padding-top-small text-normal-minus">
+           <span className="grey-text text-lighten-1"><i className="fa fa-calendar"></i>&nbsp;On demand</span>
+          </div>
+         </div>
+        </div>
+       </div>
+      </Link>
+
       <Link className="upcoming-event" to="/getting-up-and-running-with-angular">
         <div className="col s12 m6 l4">
          <div className="card">
@@ -64,6 +79,7 @@ class Pro extends Component{
         </div>
        </div>
       </Link>
+
       <Link className="upcoming-event" to="/getting-up-and-running-with-angular">
         <div className="col s12 m6 l4">
          <div className="card">
@@ -77,6 +93,7 @@ class Pro extends Component{
         </div>
        </div>
       </Link>
+
       <Link className="upcoming-event" to="/getting-up-and-running-with-angular">
         <div className="col s12 m6 l4">
          <div className="card">
@@ -90,6 +107,7 @@ class Pro extends Component{
         </div>
        </div>
       </Link>
+
       <Link className="upcoming-event" to="/getting-up-and-running-with-angular">
         <div className="col s12 m6 l4">
          <div className="card">
@@ -103,6 +121,7 @@ class Pro extends Component{
         </div>
        </div>
       </Link>
+
       <Link className="upcoming-event" to="/getting-up-and-running-with-angular">
         <div className="col s12 m6 l4">
          <div className="card">
@@ -116,6 +135,7 @@ class Pro extends Component{
         </div>
        </div>
       </Link>
+
       <Link className="upcoming-event" to="/getting-up-and-running-with-angular">
         <div className="col s12 m6 l4">
          <div className="card">
@@ -129,6 +149,7 @@ class Pro extends Component{
         </div>
        </div>
       </Link>
+
       <Link className="upcoming-event" to="/getting-up-and-running-with-angular">
         <div className="col s12 m6 l4">
          <div className="card">
@@ -142,6 +163,7 @@ class Pro extends Component{
         </div>
        </div>
       </Link>
+
       <Link className="upcoming-event" to="/getting-up-and-running-with-angular">
         <div className="col s12 m6 l4">
          <div className="card">
@@ -155,6 +177,7 @@ class Pro extends Component{
         </div>
        </div>
       </Link>
+
       <Link className="upcoming-event" to="/getting-up-and-running-with-angular">
         <div className="col s12 m6 l4">
          <div className="card">
@@ -168,19 +191,7 @@ class Pro extends Component{
         </div>
        </div>
       </Link>
-      <Link className="upcoming-event" to="/getting-up-and-running-with-angular">
-        <div className="col s12 m6 l4">
-         <div className="card">
-          <div className="card-content card-height">
-           <p className="grey-text text-darken-2 uppercase card-title1">JavaScript & Angular bootcamp for developers</p>
-           <p className="grey-text text-lighten-1 card-title2">6 days bootcamp</p>
-           <div className="align-middle padding-top-small text-normal-minus">
-           <span className="grey-text text-lighten-1"><i className="fa fa-calendar"></i>&nbsp;On demand</span>
-          </div>
-         </div>
-        </div>
-       </div>
-      </Link>
+
       <Link className="upcoming-event" to="/getting-up-and-running-with-angular">
         <div className="col s12 m6 l4">
          <div className="card">
@@ -194,6 +205,7 @@ class Pro extends Component{
         </div>
        </div>
       </Link>
+
       </div>
      </div>
     </section>
