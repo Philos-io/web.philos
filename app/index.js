@@ -10,31 +10,31 @@ import ProductDetail from './components/productDetails';
 import NoMatch from './components/nomatch';
 import Products from './components/products';
 import Menu from './components/menu';
+import BootCampPage from './components/bootcamp';
+import AboutPage from './components/about';
 
-class Philos extends Component{
-  render(){
-    return <div>
+const Philos = ()=>{
+  return <div>
             <Header/>
               <Testimonials/>
               <About/>
               <Partner/>
             <Footer/>
           </div>;
-  }
-}
+};
 
-class Canvas extends Component{
-   render(){
-     return <div>
+const Canvas = ()=>{
+  return <div>
                <Menu/>
                {this.props.children}
                <Footer/>
             </div>;
-   }
-}
+};
 
 render((<Router>
           <Route path="/" component={Philos}/>
+          <Route path="/program" component={BootCampPage}/>
+          <Route path="/about" component={AboutPage}/>
           <Route path="/products" component={Canvas}>
             <IndexRoute component={Products}/>
             <Route path=":id" component={ProductDetail}/>
