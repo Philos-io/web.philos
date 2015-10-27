@@ -594,6 +594,10 @@ footer.page-footer {
   min-height: 12rem;
 }
 
+.common-header-height{
+  min-height: 10rem;
+}
+
 .head-height{
   min-height: 30rem;
 }
