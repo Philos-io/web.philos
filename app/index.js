@@ -12,6 +12,7 @@ import Products from './components/products';
 import Menu from './components/menu';
 import BootCampPage from './components/bootcamp';
 import AboutPage from './components/about';
+import CommunityPage from './components/community';
 
 const Philos = ()=>{
   return <div>
@@ -35,6 +36,7 @@ render((<Router>
           <Route path="/" component={Philos}/>
           <Route path="/program" component={BootCampPage}/>
           <Route path="/about" component={AboutPage}/>
+          <Route path="/community" component={CommunityPage}/>
           <Route path="/products" component={Canvas}>
             <IndexRoute component={Products}/>
             <Route path=":id" component={ProductDetail}/>
