@@ -1,10 +1,10 @@
 import React from 'react';
 import Community from '../community';
-import Menu from '../menu';
+import Header from '../header';
 
 const CommunityPage = ()=>{
   return (<div>
-            <Menu title="Community First"/>
+            <Header title='community first' currentTab='community'/>
             <Community/>
           </div>);
 };

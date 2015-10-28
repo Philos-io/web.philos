@@ -1,12 +1,11 @@
 import React from 'react';
-import FAQ from '../faq';
-import Menu from '../menu';
+import Header from '../header';
+// import FAG from './faq';
 
-const FAQ = ()=>{
+const FAQPage = ()=>{
   return (<div>
-            <Menu title="Frequently asked questions"/>
-            <FAQ/>
+            <Header title='frequently asked questions' currentTab='faq'/>
           </div>);
 };
 
-export default FAQ;
+export default FAQPage;

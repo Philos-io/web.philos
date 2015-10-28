@@ -1,11 +1,11 @@
 import React from 'react';
 import About from '../about';
-import Menu from '../menu';
+import Header from '../header';
 
 const AboutPage = ()=>{
   return (<div>
-          <Menu title="about philos"/>
-          <About/>
+            <Header title='about philos' currentTab='about'/>
+            <About/>
           </div>);
 };
 
