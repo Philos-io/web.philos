@@ -9,7 +9,7 @@ const Menu = ({decoration, currentTab})=>{
             <li><Link className={(currentTab === 'about'? 'active uppercase': 'uppercase')} to="/about">about</Link></li>
             <li><Link className={(currentTab === 'faq'? 'active uppercase': 'uppercase')} to="/faq">faq</Link></li>
             <li><Link className={(currentTab === 'community'? 'active uppercase': 'uppercase')} to="/community">community</Link></li>
-            <li><Link className="uppercase" to="http://blog.philos.io">blog</Link></li>
+            <li><a className="uppercase" href="http://blog.philos.io">blog</a></li>
           </ul>);
 
 };
@@ -19,7 +19,7 @@ const Banner = ({title})=>{
             <div className="container">
               <div className="row">
                 <div className="col s12">
-                  <h5 className="philos-orange center uppercase">{title}</h5>
+                  <h5 className="philos-orange center uppercase animated fadeInUpSmall">{title}</h5>
                 </div>
               </div>
             </div>
