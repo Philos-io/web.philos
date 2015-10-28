@@ -14,7 +14,7 @@ const Banner = ({title})=>{
 };
 
 
-const Menu = ({title})=>{
+const Menu = ({title, banner})=>{
     return <header>
              <nav className="transparent z-depth-0" role="navigation">
               <div className="nav-wrapper bg-pattern">
@@ -65,7 +65,7 @@ const Menu = ({title})=>{
 		        </div>
 		      </div>
 		    </nav>
-        <Banner title={title}/>
+        {banner}
 		</header>
 };
 
