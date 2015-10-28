@@ -14,6 +14,7 @@ import BootCampPage from './components/bootcamp';
 import AboutPage from './components/about';
 import CommunityPage from './components/community';
 import ContactPage from './components/contact';
+import FaqPage from './components/faq';
 
 const Philos = ()=>{
   return <div>
@@ -37,6 +38,7 @@ render((<Router>
           <Route path="/" component={Philos}/>
           <Route path="/program" component={BootCampPage}/>
           <Route path="/about" component={AboutPage}/>
+          <Route path="/faq" component={FaqPage}/>
           <Route path="/community" component={CommunityPage}/>
           <Route path="/contact" component={ContactPage}/>
           <Route path="/products" component={Canvas}>
