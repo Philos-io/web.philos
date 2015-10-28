@@ -2,8 +2,7 @@ import React from 'react';
 import {Link} from 'react-router';
 
 const FAQ = ()=>{
-
-return 	(<section className="grey lighten-4 padding-bottom-medium padding-top-medium">
+  return 	(<section className="grey lighten-4 padding-bottom-medium padding-top-medium">
 		<div className="container ">
 			<div className="row">
 				<div className="col s12 center">
