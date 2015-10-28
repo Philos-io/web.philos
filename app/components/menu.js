@@ -1,14 +1,26 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router';
 
-class Menu extends Component{
-  render(){
-    return <header className="">
-		    <nav className="transparent z-depth-0" role="navigation">
-		      <div className="nav-wrapper nav-bg">
-		        <Link id="logo-container" to="/" className="brand-logo hide-on-med-and-down">
-              <img className="responsive-img border-top-vsmall padding-left-vsmall" src="img/logo/philos_logo-m.png"/>
-            </Link>
+const Banner = ({title})=>{
+ return (<section className="bg-pattern header-height padding-bottom-small padding-top-medium">
+            <div className="container">
+              <div className="row">
+                <div className="col s12">
+                  <h5 className="philos-orange center uppercase">{title}</h5>
+                </div>
+              </div>
+            </div>
+          </section>);
+};
+
+
+const Menu = ({title})=>{
+    return <header>
+             <nav className="transparent z-depth-0" role="navigation">
+              <div className="nav-wrapper bg-pattern">
+		            <Link id="logo-container" to="/" className="brand-logo hide-on-med-and-down">
+                  <img className="responsive-img border-top-vsmall padding-left-vsmall" src="img/logo/philos_logo-m.png"/>
+                </Link>
 		        <ul className="right hide-on-med-and-down">
 		          <li><Link className="active" to="/workshops">TRAINING</Link></li>
 		          <li><Link to="/pricing">PRICING</Link></li>
@@ -53,8 +65,8 @@ class Menu extends Component{
 		        </div>
 		      </div>
 		    </nav>
+        <Banner title={title}/>
 		</header>
-  }
-}
+};
 
 export default Menu;

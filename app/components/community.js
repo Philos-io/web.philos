@@ -4,18 +4,13 @@ import {Link} from 'react-router';
 const Community = ()=>{
  return (<section className="grey lighten-4 padding-top-medium ">
 		<div className="container ">
-			<div className="row ">
-				<div className="col s12 center">
-					<h2>Community</h2>
-				</div>
-			</div>
-			<div className="row no-margin-bottom">
+      <div className="row no-margin-bottom">
 				<div className="col s12">
 					<div className="card">
 						<div className="card-content">
 						<p>We love to mingle with the tech community. It's the perfect occasion to meet, learn and share our skills to bring our respective methods and projects to the next level.</p><br/>
 						<p>The events we are organizing target an audience of developers. However, even if you are not a developer, you are more than welcome to attend them. We sometimes find IT project managers or CEOs attending our events as they want to keep up to date with the latest technologies and trends and get the pulse directly from developers on those topics. </p><br/>
-						<p>Workshops and bootcamps are more selective, as it is exclusively for developers and works with an admission process. More info <Link href="/faq" className="philos-teal">here</Link></p>
+						<p>Workshops and bootcamps are more selective, as it is exclusively for developers and works with an admission process. More info <Link to="/faq" className="philos-teal">here</Link></p>
 						</div>
 					</div>
 				</div>
@@ -27,7 +22,7 @@ const Community = ()=>{
 				<h4>Upcoming events</h4>
 			</div>
 			<div className="row">
-		         <Link className="upcoming-event" href="http://www.meetup.com/AngularJS-Belgium/events/224511999/" target="_blank">
+		         <Link className="upcoming-event" to="http://www.meetup.com/AngularJS-Belgium/events/224511999/" target="_blank">
 		            <div className="col s12 m6 l4">
 		              <div className="card">
 		                <div className="card-image">
@@ -43,7 +38,7 @@ const Community = ()=>{
 		              </div>
 		            </div>
 		          </Link>
-		          <Link className="upcoming-event" href="http://www.meetup.com/ReactJS-Belgium/events/224503728/" target="_blank">
+		          <Link className="upcoming-event" to="http://www.meetup.com/ReactJS-Belgium/events/224503728/" target="_blank">
 		            <div className="col s12 m6 l4">
 		              <div className="card">
 		                <div className="card-image">
@@ -60,7 +55,7 @@ const Community = ()=>{
 		            </div>
 		          </Link>
 
-		          <Link className="upcoming-event hide-on-med-only" href="http://www.meetup.com/javascriptlab/events/221485094/" target="_blank">
+		          <Link className="upcoming-event hide-on-med-only" to="http://www.meetup.com/javascriptlab/events/221485094/" target="_blank">
 		            <div className="col s12 m6 l4">
 		              <div className="card">
 		                <div className="card-image">
@@ -80,7 +75,7 @@ const Community = ()=>{
 		        </div>
 
 		        <div className="row hide-on-large-only hide-on-small-only">
-		          <Link className="upcoming-event" href="http://www.meetup.com/javascriptlab/events/221485094/" target="_blank">
+		          <Link className="upcoming-event" to="http://www.meetup.com/javascriptlab/events/221485094/" target="_blank">
 		            <div className="col s12 m6 l4">
 		              <div className="card">
 		                <div className="card-image">
@@ -102,7 +97,7 @@ const Community = ()=>{
 		              <br/>
 		              </p>
 		              <p className="text-normal-plus  center">
-		                <Link href="/contact"><span className="philos-orange uppercase">CONTACT US</span></Link>
+		                <Link to="/contact"><span className="philos-orange uppercase">CONTACT US</span></Link>
 		              </p>
 		          </div>
 
@@ -112,7 +107,7 @@ const Community = ()=>{
 		           <div className="col s12 center hide-on-med-only">
 		              <p className="text-normal-plus">Want to suggest us other topics to cover or become a partner?
 		              <br/>
-		              <Link href="/contact"><span className="philos-orange uppercase">CONTACT US</span></Link>
+		              <Link to="/contact"><span className="philos-orange uppercase">CONTACT US</span></Link>
 		              </p>
 		            </div>
 		        </div>
@@ -128,7 +123,7 @@ const Community = ()=>{
 
 			<div className="row">
 
-		         <Link className="upcoming-event" href="http://www.meetup.com/javascriptlab/events/223097149/" target="_blank">
+		         <Link className="upcoming-event" to="http://www.meetup.com/javascriptlab/events/223097149/" target="_blank">
 		            <div className="col s12 m6 l4">
 		              <div className="card">
 		                <div className="card-image">
@@ -144,7 +139,7 @@ const Community = ()=>{
 		              </div>
 		            </div>
 		          </Link>
-		          <Link className="upcoming-event" href="http://www.meetup.com/ReactJS-Belgium/events/222707928/" target="_blank">
+		          <Link className="upcoming-event" to="http://www.meetup.com/ReactJS-Belgium/events/222707928/" target="_blank">
 		            <div className="col s12 m6 l4">
 		              <div className="card">
 		                <div className="card-image">
@@ -161,7 +156,7 @@ const Community = ()=>{
 		            </div>
 		          </Link>
 
-		          <Link className="upcoming-event hide-on-med-only" href="http://www.meetup.com/javascriptlab/events/222663312/" target="_blank">
+		          <Link className="upcoming-event hide-on-med-only" to="http://www.meetup.com/javascriptlab/events/222663312/" target="_blank">
 		            <div className="col s12 m6 l4">
 		              <div className="card">
 		                <div className="card-image">
@@ -178,8 +173,8 @@ const Community = ()=>{
 		            </div>
 		          </Link>
 		        </div>
-		        <div className="row hide-on-large-only hide-on-small-only" href="http://www.meetup.com/javascriptlab/events/222663312/" target="_blank">
-		          <Link className="upcoming-event" href="#">
+		        <div className="row hide-on-large-only hide-on-small-only" to="http://www.meetup.com/javascriptlab/events/222663312/" target="_blank">
+		          <Link className="upcoming-event" to="#">
 		            <div className="col s12 m6 l4">
 		              <div className="card">
 		                <div className="card-image">
@@ -201,7 +196,7 @@ const Community = ()=>{
 		              <br/>
 		              </p>
 		              <p className="text-normal-plus center">
-		                <Link href="/contact"><span className="philos-orange uppercase">CONTACT US</span></Link>
+		                <Link to="/contact"><span className="philos-orange uppercase">CONTACT US</span></Link>
 		              </p>
 		          </div>
 		        </div>
@@ -209,7 +204,7 @@ const Community = ()=>{
 		           <div className="col s12 center hide-on-med-only">
 		              <p className="text-normal-plus">Want to get the slides of the conference or get in touch with a speaker?
 		              <br/>
-		              <Link href="/contact"><span className="philos-orange uppercase">CONTACT US</span></Link>
+		              <Link to="/contact"><span className="philos-orange uppercase">CONTACT US</span></Link>
 		              </p>
 		            </div>
 		        </div>

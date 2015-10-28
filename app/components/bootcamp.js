@@ -12,6 +12,6 @@ let BootCamp = () => {
              <Banner/>
              <Curriculum/>
             </div>);
-}
+};
 
 export default BootCamp;

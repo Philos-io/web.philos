@@ -39,17 +39,8 @@ class Contact extends Component{
   render(){
     return (<div>
           <section className="padding-bottom-medium padding-top-small">
-          <div className="container">
-            <div className="row">
-                <div className="col s12 center">
-                    <h2>Contact Philos</h2>
-                    <h4 className="padding-top-small">Get in touch to start building something great together</h4>
-                </div>
-            </div>
-          </div>
-
-          <div className="container margin-top-medium">
-            <div className="row">
+            <div className="container margin-top-medium">
+              <div className="row">
                 <div className="col s12 col m4 center">
                     <span className="fa-stack fa-5x philos-teal" >
                       <i className="fa fa-circle fa-stack-2x"></i>
