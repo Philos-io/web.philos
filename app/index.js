@@ -1,36 +1,32 @@
-import React, {Component, render} from 'react';
+import React, {Component} from 'react';
+import {Router, Route, IndexRoute} from 'react-router';
+import {render} from 'react-dom';
+import WorkshopDetailPage from './components/pages/workshopDetailsPage';
+import NoMatch from './components/nomatch';
+import Workshops from './components/pages/workshopsPage';
+import BootCampPage from './components/bootcamp';
+import AboutPage from './components/pages/aboutPage';
+import CommunityPage from './components/pages/communityPage';
+import ContactPage from './components/pages/contactPage';
+import FaqPage from './components/pages/faqPage';
+import Philos from './components/pages/mainPage';
+import PricingPage from './components/pages/pricingPage';
+import Layout from './components/layout';
 
-class Product extends Component{
-  render(){
-    return <div className="row">
-            <div className="col s12 m4">
-                <div className="card card-product blue darken-2">,
-                  <img src="images/js.png" alt="JavaScript"/>
-                  <div className="card-content white-text">
-                    <span className="card-title">JavaScript Best Practices and Patterns</span>
-                    <p>Learn how to leverage the design of the JavaScript language and
-                        the patterns that have grown up around it in order to structure, write,
-                        and maintain large-scale web applications.</p>
-                  </div>
-                  <div className="card-action">
-                    <a className="waves-effect waves-light btn">Follow</a>
-                  </div>
-                  </div>
-              </div>
-            </div>;
-  }
-}
+render((<Router>
+          <Route path="/" component={Layout}>
+            <IndexRoute component={Philos}/>
+            <Route path="program" component={BootCampPage}/>
+            <Route path="about" component={AboutPage}/>
+            <Route path="faq" component={FaqPage}/>
+            <Route path="community" component={CommunityPage}/>
+            <Route path="contact" component={ContactPage}/>
+            <Route path="pricing" component={PricingPage}/>
+          </Route>
+          <Route path="/workshops" component={Layout}>
+            <IndexRoute component={Workshops}/>
+            <Route path=":id" component={WorkshopDetailPage}/>
+          </Route>
+          <Route path="*" component={NoMatch}/>
+       </Router>), document.getElementById('container'));
 
-
-
-class Philos extends Component{
-  render(){
-    return <div>
-      <Product/>
-    </div>;
-  }
-}
-
-
-// export default Philos;
-render(<Philos/>, document.body);
