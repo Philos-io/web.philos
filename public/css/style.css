@@ -573,6 +573,10 @@ HEIGHT
   height: 18rem;
 }
 
+.card-height-3{
+  height: 20rem;
+}
+
 .card-title1{
   min-height: 3rem;
 }
@@ -617,11 +621,12 @@ footer.page-footer {
 BUTTON
 ======================*/
 .btn, .btn-large{
-  background-color: #FF4C27;;
+  background-color: #FF4C27;
 }
 
 .btn:hover, .btn-large:hover {
-background-color: #FF5733; }
+background-color: #FF5733; 
+}
 
 /* ======================
 NAV 
@@ -768,3 +773,7 @@ LOGO CONTAINER
   animation-name: fadeInUpSmall;
 }
 
+
+/* ======================
+FORM FIELDS
+======================*/
