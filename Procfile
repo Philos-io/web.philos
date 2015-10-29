@@ -1,1 +1,1 @@
-web: ./node_modules/.bin/forever -m 5 server.js
+web: npm install && ./node_modules/nodemon/bin/nodemon.js --exec ./node_modules/babel/bin/babel-node.js --stage 0 server.js
