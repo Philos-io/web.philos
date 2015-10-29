@@ -3,6 +3,7 @@ import {Link} from 'react-router';
 import Product from './product.js';
 import Parse from 'parse';
 import ParseReact from 'parse-react';
+import {products} from './philos.data';
 
 let ParseComponent = ParseReact.Component(React);
 
@@ -29,187 +30,57 @@ class Products extends ParseComponent{
             {{products}}
             </div>;
   }
+};
 
-}
+
+let Workshop = ({...product})=>{
+ return (<Link className="upcoming-event" to={product.detailsUrl}>
+           <div className="col s12 m6 l4">
+             <div className="card">
+               <div className="card-content card-height">
+                 <p className="grey-text text-darken-2 uppercase card-title1">{product.topic}</p>
+                 <p className="grey-text text-lighten-1 card-title2">{product.length}</p>
+                 <div className="align-middle padding-top-small text-normal-minus">
+                   <span className="grey-text text-lighten-1"><i className="fa fa-calendar"></i>&nbsp;{product.date}</span>
+                </div>
+               </div>
+              </div>
+          </div>
+        </Link>);
+};
+
+let Bootcamp = ({...product})=>{
+ return (<Link className="upcoming-event" to={product.detailsUrl}>
+          <div className="col s12 m8 l8">
+            <div className="card">
+              <div className="card-content card-height">
+               <p className="grey-text text-darken-2 uppercase card-title1">{product.topic}</p>
+               <p className="grey-text text-lighten-1 card-title2">{product.length}</p>
+               <div className="align-middle padding-top-small text-normal-minus">
+                 <span className="grey-text text-lighten-1"><i className="fa fa-calendar"></i>&nbsp;{product.date}</span>
+               </div>
+              </div>
+           </div>
+         </div>
+      </Link>);
+};
 
 
-class Pro extends Component{
+class Workshops extends Component{
   render(){
     return <section className="grey lighten-4">
-    <div className="container">
-     <div className="row padding-top-small">
-      <Link className="upcoming-event" to="/workshops/getting-up-and-running-with-angular">
-        <div className="col s12 m6 l4">
-         <div className="card">
-          <div className="card-content card-height">
-           <p className="grey-text text-darken-2 uppercase card-title1">JavaScript Best Practices and Patterns</p>
-           <p className="grey-text text-lighten-1 card-title2">Half day workshop</p>
-           <div className="align-middle padding-top-small text-normal-minus">
-           <span className="grey-text text-lighten-1"><i className="fa fa-calendar"></i>&nbsp;On demand</span>
-          </div>
-         </div>
-        </div>
-       </div>
-      </Link>
-
-      <Link className="upcoming-event" to="/program">
-        <div className="col s12 m6 l4">
-         <div className="card">
-          <div className="card-content card-height">
-           <p className="grey-text text-darken-2 uppercase card-title1">JavaScript & Angular bootcamp for developers</p>
-           <p className="grey-text text-lighten-1 card-title2">6 days bootcamp</p>
-           <div className="align-middle padding-top-small text-normal-minus">
-           <span className="grey-text text-lighten-1"><i className="fa fa-calendar"></i>&nbsp;On demand</span>
-          </div>
-         </div>
-        </div>
-       </div>
-      </Link>
-
-      <Link className="upcoming-event" to="/getting-up-and-running-with-angular">
-        <div className="col s12 m6 l4">
-         <div className="card">
-          <div className="card-content card-height">
-           <p className="grey-text text-darken-2 uppercase card-title1">Writing testable JavaScript Application</p>
-           <p className="grey-text text-lighten-1 card-title2">Half day workshop</p>
-           <div className="align-middle padding-top-small text-normal-minus">
-           <span className="grey-text text-lighten-1"><i className="fa fa-calendar"></i>&nbsp;On demand</span>
-          </div>
-         </div>
-        </div>
-       </div>
-      </Link>
-
-      <Link className="upcoming-event" to="/getting-up-and-running-with-angular">
-        <div className="col s12 m6 l4">
-         <div className="card">
-          <div className="card-content card-height">
-           <p className="grey-text text-darken-2 uppercase card-title1">Getting up and running with ES6</p>
-           <p className="grey-text text-lighten-1 card-title2">1 or 2 days workshops</p>
-           <div className="align-middle padding-top-small text-normal-minus">
-           <span className="grey-text text-lighten-1"><i className="fa fa-calendar"></i>&nbsp;On demand</span>
-          </div>
-         </div>
-        </div>
-       </div>
-      </Link>
-
-      <Link className="upcoming-event" to="/getting-up-and-running-with-angular">
-        <div className="col s12 m6 l4">
-         <div className="card">
-          <div className="card-content card-height">
-           <p className="grey-text text-darken-2 uppercase card-title1">Performances in Angular</p>
-           <p className="grey-text text-lighten-1 card-title2">Half day workshop</p>
-           <div className="align-middle padding-top-small text-normal-minus">
-           <span className="grey-text text-lighten-1"><i className="fa fa-calendar"></i>&nbsp;On demand</span>
-          </div>
-         </div>
-        </div>
-       </div>
-      </Link>
-
-      <Link className="upcoming-event" to="/getting-up-and-running-with-angular">
-        <div className="col s12 m6 l4">
-         <div className="card">
-          <div className="card-content card-height">
-           <p className="grey-text text-darken-2 uppercase card-title1">Testing in Angular</p>
-           <p className="grey-text text-lighten-1 card-title2">Half day workshop</p>
-           <div className="align-middle padding-top-small text-normal-minus">
-           <span className="grey-text text-lighten-1"><i className="fa fa-calendar"></i>&nbsp;On demand</span>
-          </div>
-         </div>
-        </div>
-       </div>
-      </Link>
-
-      <Link className="upcoming-event" to="/getting-up-and-running-with-angular">
-        <div className="col s12 m6 l4">
-         <div className="card">
-          <div className="card-content card-height">
-           <p className="grey-text text-darken-2 uppercase card-title1">Asynchronous programming in JavaScript</p>
-           <p className="grey-text text-lighten-1 card-title2">Half day workshop</p>
-           <div className="align-middle padding-top-small text-normal-minus">
-           <span className="grey-text text-lighten-1"><i className="fa fa-calendar"></i>&nbsp;On demand</span>
-          </div>
-         </div>
-        </div>
-       </div>
-      </Link>
-
-      <Link className="upcoming-event" to="/getting-up-and-running-with-angular">
-        <div className="col s12 m6 l4">
-         <div className="card">
-          <div className="card-content card-height">
-           <p className="grey-text text-darken-2 uppercase card-title1">JavaScript in depth</p>
-           <p className="grey-text text-lighten-1 card-title2">2 days advanced bootcamp for developers</p>
-           <div className="align-middle padding-top-small text-normal-minus">
-           <span className="grey-text text-lighten-1"><i className="fa fa-calendar"></i>&nbsp;On demand</span>
-          </div>
-         </div>
-        </div>
-       </div>
-      </Link>
-
-      <Link className="upcoming-event" to="/getting-up-and-running-with-angular">
-        <div className="col s12 m6 l4">
-         <div className="card">
-          <div className="card-content card-height">
-           <p className="grey-text text-darken-2 uppercase card-title1">End to end testing and Continous Integration</p>
-           <p className="grey-text text-lighten-1 card-title2">1 day bootcamp</p>
-           <div className="align-middle padding-top-small text-normal-minus">
-           <span className="grey-text text-lighten-1"><i className="fa fa-calendar"></i>&nbsp;On demand</span>
-          </div>
-         </div>
-        </div>
-       </div>
-      </Link>
-
-      <Link className="upcoming-event" to="/getting-up-and-running-with-angular">
-        <div className="col s12 m6 l4">
-         <div className="card">
-          <div className="card-content card-height">
-           <p className="grey-text text-darken-2 uppercase card-title1">One day in TypeScript</p>
-           <p className="grey-text text-lighten-1 card-title2">1 day bootcamp</p>
-           <div className="align-middle padding-top-small text-normal-minus">
-           <span className="grey-text text-lighten-1"><i className="fa fa-calendar"></i>&nbsp;On demand</span>
-          </div>
-         </div>
-        </div>
-       </div>
-      </Link>
-
-      <Link className="upcoming-event" to="/getting-up-and-running-with-angular">
-        <div className="col s12 m6 l4">
-         <div className="card">
-          <div className="card-content card-height">
-           <p className="grey-text text-darken-2 uppercase card-title1">Writing modular Applications (Architecture & Design)</p>
-           <p className="grey-text text-lighten-1 card-title2">2 days advanced bootcamp for developers</p>
-           <div className="align-middle padding-top-small text-normal-minus">
-           <span className="grey-text text-lighten-1"><i className="fa fa-calendar"></i>&nbsp;On demand</span>
-          </div>
-         </div>
-        </div>
-       </div>
-      </Link>
-
-      <Link className="upcoming-event" to="/getting-up-and-running-with-angular">
-        <div className="col s12 m6 l4">
-         <div className="card">
-          <div className="card-content card-height">
-           <p className="grey-text text-darken-2 uppercase card-title1">Everything is a component</p>
-           <p className="grey-text text-lighten-1 card-title2">1 day bootcamp</p>
-           <div className="align-middle padding-top-small text-normal-minus">
-           <span className="grey-text text-lighten-1"><i className="fa fa-calendar"></i>&nbsp;On demand</span>
-          </div>
-         </div>
-        </div>
-       </div>
-      </Link>
-
-      </div>
-     </div>
-    </section>
+             <div className="container">
+               <div className="row padding-top-small">
+               {products.map((product)=>{
+                 if(product.type === 'bootcamp')
+                   return <Bootcamp {...product} key={product.topic}/>
+                 else
+                   return <Workshop {...product} key={product.topic}/>
+               })}
+               </div>
+            </div>
+          </section>
   }
-}
+};
 
-export default Pro;
+export default Workshops;
