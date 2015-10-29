@@ -4,7 +4,6 @@ var express = require('express'),
 var dirPath = path.join(__dirname, '../../public');
 
 module.exports = function(app){
-	
 
 	app.get('/contact', function(req, res){
 		res.sendFile(path.join(dirPath+'/contact.html'));
