@@ -32,11 +32,18 @@ class Products extends ParseComponent{
   }
 };
 
+let Image = ({source}) =>{
+  return <div className="card-image">
+           <img className="responsive-img" src={source} alt="AngularJS"/>
+        </div>
+};
+
 
 let Workshop = ({...product})=>{
  return (<Link className="upcoming-event" to={product.detailsUrl}>
            <div className="col s12 m6 l4">
              <div className="card">
+               {(product.image && product.displayImage && <Image source={product.image}/>)}
                <div className="card-content card-height">
                  <p className="grey-text text-darken-2 uppercase card-title1">{product.topic}</p>
                  <p className="grey-text text-lighten-1 card-title2">{product.length}</p>
@@ -53,6 +60,7 @@ let Bootcamp = ({...product})=>{
  return (<Link className="upcoming-event" to={product.detailsUrl}>
           <div className="col s12 m8 l8">
             <div className="card">
+               {(product.image && product.displayImage && <Image source={product.image}/>)}
               <div className="card-content card-height">
                <p className="grey-text text-darken-2 uppercase card-title1">{product.topic}</p>
                <p className="grey-text text-lighten-1 card-title2">{product.length}</p>
