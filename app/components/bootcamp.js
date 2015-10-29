@@ -4,14 +4,15 @@ import Banner from './banner';
 import Curriculum from './curriculum';
 import Header from './header';
 
-// bg-photo-1
 
-let BootCamp = () => {
+class BootCamp extends Component{
+  render(){
     return (<div>
-             <Header background='bg-photo-1 head-height'/>
+             <Header background='bg-photo-1 head-height' title='Advanced JavaScript & Angular Bootcamp'/>
              <Banner/>
              <Curriculum/>
             </div>);
+  }
 };
 
 export default BootCamp;

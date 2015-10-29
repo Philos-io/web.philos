@@ -2,14 +2,14 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-  devtool: 'eval',
+  devtool: 'eval-source-map',
   entry: [
     'webpack-dev-server/client?http://localhost:9000',
     'webpack/hot/only-dev-server',
     './app/index'
   ],
   output: {
-    path: path.resolve(__dirname, "public"),
+    path: path.resolve(__dirname, 'build'),
     filename: "bundle.js"
   },
   module: {
@@ -29,6 +29,6 @@ module.exports = {
     new webpack.NoErrorsPlugin()
   ],
   devServer:{
-    contentBase: './public'
+    contentBase: './build'
   }
 };

@@ -2,11 +2,10 @@ import  webpack from 'webpack';
 import  WebpackDevServer from 'webpack-dev-server';
 import  config from './webpack.config';
 
-
 let port = process.env.PORT || 9000;
 
 let server = new WebpackDevServer(webpack(config), {
-  contentBase: 'public',
+  contentBase: 'build',
   hot: true,
   stats: {
     colors: true
