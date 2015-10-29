@@ -20,6 +20,7 @@ const philos = {
       topic: 'Writing Testable JavaScript Application',
       date: 'On demand',
       length: 'Half Day Workshop',
+      image: 'img/workshops/TDD.png',
       detailsUrl: '/workshops/writing-testable-javascript-applications',
       type: 'workshop'
     },
@@ -90,6 +91,32 @@ const philos = {
       length: '1 Day Workshop',
       detailsUrl: '/workshops/everything-is-a-component',
       type: 'workshop'
+    }
+  ],
+  partners : [
+    {
+      name: 'De Persgroep',
+      logo: 'img/partners/grey/de-persgroep_g.png'
+    },
+    {
+      name: 'Volt',
+      logo: 'img/partners/grey/volt_g.png'
+    },
+    {
+      name: 'KBC',
+      logo: 'img/partners/grey/kbc_g.png'
+    },
+    {
+      name: 'TekSystems',
+      logo: 'img/partners/grey/teksystems_g.png'
+    },
+    {
+      name: 'Wemanity',
+      logo: 'img/partners/grey/wemanity_g.png'
+    },
+    {
+      name: 'Bizboard',
+      logo: 'img/partners/grey/bizboard_g.png'
     }
   ],
   testimonials : [
