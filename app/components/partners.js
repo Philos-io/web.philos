@@ -60,7 +60,6 @@ const Section = ()=>{
                 <div className="row padding-top-small">
                 {
                   products.slice(0,3).map((product)=>{
-                    product.displayImage = true;
                     return <Workshop {...product} key={product.title}/>;
                   })
                 }
