@@ -9,6 +9,10 @@ module.exports = function(app){
 		res.sendFile(path.join(dirPath+'/contact.html'));
 	});
 
+  app.get('/devoxx', function(req, res){
+		res.sendFile(path.join(dirPath+'/devoxx.html'));
+	});
+
 	app.get('/program', function(req, res){
 		res.sendFile(path.join(dirPath+'/program.html'));
 	});
