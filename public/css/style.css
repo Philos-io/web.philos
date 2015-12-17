@@ -621,11 +621,15 @@ footer.page-footer {
 BUTTON
 ======================*/
 .btn, .btn-large{
-  background-color: #FF4C27;
+ background-color: #FF4C27;
 }
 
 .btn:hover, .btn-large:hover {
 background-color: #FF5733; 
+}
+
+.btn-border-orange{
+border: 2px solid #FF4C27;
 }
 
 /* ======================
