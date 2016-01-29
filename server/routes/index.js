@@ -13,6 +13,10 @@ module.exports = function(app){
 		res.sendFile(path.join(dirPath+'/evaluation-form.html'));
 	});
 
+	app.get('/evaluation-bootcamp', function(req, res){
+		res.sendFile(path.join(dirPath+'/evaluation-form.html'));
+	});
+
   	app.get('/devoxx', function(req, res){
 		res.sendFile(path.join(dirPath+'/devoxx.html'));
 	});
