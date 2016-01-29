@@ -14,7 +14,7 @@ module.exports = function(app){
 	});
 
 	app.get('/evaluation-bootcamp', function(req, res){
-		res.sendFile(path.join(dirPath+'/evaluation-form.html'));
+		res.sendFile(path.join(dirPath+'/evaluation-bootcamp.html'));
 	});
 
   	app.get('/devoxx', function(req, res){
