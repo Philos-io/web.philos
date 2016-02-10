@@ -8,7 +8,8 @@
     "build": "webpack --config webpack.prod.config.js",
     "start": "nodemon --exec babel-node --stage 0 server.js",
     "ssr": "nodemon --exec babel-node --stage 0 ssr.js",
-    "react": "nodemon --exec babel-node server-react.js"
+    "react": "nodemon --exec babel-node server-react.js",
+    "live": "live-server"
   },
   "repository": {
     "type": "git",
