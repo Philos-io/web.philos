@@ -1,11 +1,13 @@
-var express = require('express'),
+'use strict';
+
+let express = require('express'),
 	app = express(),
 	compression = require('compression'),
 	path = require('path');
 
-var views = path.resolve(__dirname, '../public');
+let views = path.resolve(__dirname, '../public');
 
-var port = process.env.PORT || 9000;
+let port = process.env.PORT || 9000;
 app.use(compression());
 app.use(express.static(views));
 
